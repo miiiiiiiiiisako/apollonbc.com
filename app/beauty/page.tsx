@@ -2,7 +2,6 @@
 
 import { Instagram, MessageCircle } from "lucide-react"
 import Link from "next/link"
-// import { TwitterTimelineSimple } from "@/components/twitter-timeline-simple"
 
 const treatmentGroups = [
   {
@@ -268,88 +267,30 @@ export default function Home() {
 
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="space-y-6">
-              <div className="border-l-4 border-yellow-400 pl-4 mb-6">
+              <div className="border-l-4 border-pink-400 pl-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-500">2025.06~08</span>
-                  <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">期間限定</span>
+                  <span className="text-sm text-gray-500">2026.02.05〜2026.03.31</span>
+                  <span className="px-2 py-1 bg-pink-100 text-pink-800 text-xs rounded-full">期間限定</span>
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-3">夏直前引き締めキャンペーン</h3>
+                <h3 className="font-semibold text-gray-800 mb-3 text-lg">花粉症肌荒れ前に！肌のお守りボライトキャンペーン</h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  冷却HIFU×脂肪溶解注射のコンビネーション治療で理想のボディラインを実現！
-                  <br />
-                  通常¥55,000→1箇所¥27,500の特別価格でご提供中
+                  ボライト治療を受けられた方は、小顔ボトックスが最大50％オフになります！
                 </p>
 
-                {/* 画像カルーセル */}
-                <div className="relative mb-4">
-                  <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
-                    <div className="flex-shrink-0">
-                      <img
-                        src="/images/campaign/feed.jpeg"
-                        alt="夏直前引き締めキャンペーン メイン"
-                        className="w-64 h-64 object-cover rounded-lg shadow-md"
-                      />
-                    </div>
-                    <div className="flex-shrink-0">
-                      <img
-                        src="/images/campaign/feed01.jpeg"
-                        alt="HIFUによる脂肪燃焼の仕組み"
-                        className="w-64 h-64 object-cover rounded-lg shadow-md"
-                      />
-                    </div>
-                    <div className="flex-shrink-0">
-                      <img
-                        src="/images/campaign/feed02.jpeg"
-                        alt="脂肪溶解注射とのコンビネーション"
-                        className="w-64 h-64 object-cover rounded-lg shadow-md"
-                      />
-                    </div>
-                    <div className="flex-shrink-0">
-                      <img
-                        src="/images/campaign/feed03.jpeg"
-                        alt="脂肪溶解注射の詳細"
-                        className="w-64 h-64 object-cover rounded-lg shadow-md"
-                      />
-                    </div>
-                    <div className="flex-shrink-0">
-                      <img
-                        src="/images/campaign/feed04.jpeg"
-                        alt="高効果モデルのご紹介"
-                        className="w-64 h-64 object-cover rounded-lg shadow-md"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-yellow-50 p-3 rounded-md">
-                  <p className="text-sm text-gray-700 font-medium">キャンペーン詳細：</p>
-                  <ul className="text-sm text-gray-600 mt-1 space-y-1">
-                    <li>• 1箇所目：¥27,500（通常¥55,000から50%OFF）</li>
-                    <li>• 2箇所目：¥20,000</li>
-                    <li>• 3箇所目：¥15,000</li>
-                    <li>• 4箇所目：¥10,000</li>
+                <div className="bg-pink-50 p-4 rounded-md mb-4">
+                  <p className="text-sm text-gray-700 font-medium mb-2">【割引内容】</p>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>・ボライト1本ご購入：小顔ボトックス <span className="font-semibold text-pink-600">20％オフ</span></li>
+                    <li>・ボライト2本ご購入：小顔ボトックス <span className="font-semibold text-pink-600">40％オフ</span></li>
+                    <li>・ボライト3本ご購入：小顔ボトックス <span className="font-semibold text-pink-600">50％オフ</span></li>
                   </ul>
                 </div>
-              </div>
 
-              <div className="border-l-4 border-[#b89e69] pl-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-500">2025.06</span>
-                  <span className="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">新治療</span>
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">イソトレチノイン内服治療開始</h3>
-                <p className="text-gray-600 text-sm">
-                  脂腺増殖症の改善に効果のあるイソトレチノインがご購入いただけるようになりました
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  花粉症シーズン前に、肌のバリア機能を高めるボライトで、
+                  <br />
+                  美しく健やかな肌を手に入れましょう。
                 </p>
-              </div>
-
-              <div className="border-l-4 border-blue-400 pl-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-500">2025.05~08</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">キャンペーン</span>
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">UVlock特別価格</h3>
-                <p className="text-gray-600 text-sm">飲む日焼け止めUVlockが期間限定で7020→5980円に！</p>
               </div>
             </div>
 
@@ -406,6 +347,7 @@ export default function Home() {
                       ))}
                     </ul>
                     <button
+                      type="button"
                       onClick={() => alert("症例写真ページは現在準備中です。今しばらくお待ちください。")}
                       className="text-[#b89e69] text-sm hover:opacity-80 transition-opacity border-b border-dashed border-[#b89e69]"
                     >

@@ -152,7 +152,7 @@ export default function Home() {
             Beauty and healing space. Refresh body and mind.
           </p>
 
-          <div className="space-x-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <button
               onClick={passwordPrompt}
               className="inline-block px-6 py-3 bg-[#b89e69] text-white rounded hover:bg-[#a08a59] transition-colors"
@@ -164,6 +164,12 @@ export default function Home() {
               className="inline-block px-6 py-3 bg-[#b89e69] text-white rounded hover:bg-[#a08a59] transition-colors"
             >
               音楽療法
+            </Link>
+            <Link
+              href="/online-skincare"
+              className="inline-block px-6 py-3 bg-teal-600 text-white rounded hover:bg-teal-700 transition-colors"
+            >
+              オンライン診療×ABC Skin Labo
             </Link>
           </div>
         </div>
