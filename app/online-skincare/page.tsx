@@ -168,7 +168,7 @@ export default function OnlineSkincarePage() {
             </div>
 
             <p className="text-gray-700 mb-6 text-center">
-              自宅にいながら、美容皮膚科専門医による本格的な診察が受けられます。
+              自宅にいながら、美容皮膚科医による本格的な診察が受けられます。
             </p>
 
             <h4 className="text-lg font-semibold text-[#b89e69] mb-4 border-b border-[#b89e69] pb-2">
@@ -212,7 +212,7 @@ export default function OnlineSkincarePage() {
                 <ul className="text-gray-600 text-sm space-y-2">
                   <li><strong>育毛治療</strong> - AGAやびまん性脱毛症の相談・お薬処方</li>
                   <li><strong>音楽療法相談</strong> - ストレスケア、メンタルヘルスサポート</li>
-                  <li><strong>アートメイク前診察</strong> - ※アーティストから当院受診の紹介があった方のみ</li>
+                  <li><strong>施術前診察</strong> - ※当院受診の紹介があった方のみ</li>
                 </ul>
               </div>
             </div>
@@ -332,7 +332,8 @@ export default function OnlineSkincarePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">処方</h4>
-                  <p className="text-gray-600 text-sm">診察結果に基づき、必要に応じて医薬品を処方いたします</p>
+                  <p className="text-gray-600 text-sm">診察結果に基づき、必要に応じて医薬品を処方もしくは
+                    別日に施術をいたします</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -341,7 +342,7 @@ export default function OnlineSkincarePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">処方薬代金のお支払い</h4>
-                  <p className="text-gray-600 text-sm">処方薬代金をお支払いください</p>
+                  <p className="text-gray-600 text-sm">処方薬代金をお支払いください（施術は基本事後のお支払いです）</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -444,8 +445,8 @@ export default function OnlineSkincarePage() {
                 <h3 className="font-semibold mt-4">第3条（サービス内容）</h3>
                 <ol className="list-decimal pl-5 text-sm text-gray-700">
                   <li>当院は、利用者に対してオンライン診察サービスを提供します。</li>
-                  <li>オンライン診察の内容には、音楽療法、肌診断、アートメイク前診察などが含まれます。</li>
-                  <li>診察結果に基づき、医師の判断により処方薬を提供する場合があります。</li>
+                  <li>オンライン診察の内容には、音楽療法、肌診断、施術前診察などが含まれます。</li>
+                  <li>診察結果に基づき、医師の判断により処方薬や施術を提供する場合があります。</li>
                 </ol>
 
                 <h3 className="font-semibold mt-4">第4条（利用登録）</h3>
