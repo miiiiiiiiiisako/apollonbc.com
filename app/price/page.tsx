@@ -88,42 +88,8 @@ const categories = [
       {
         title: "たるみ治療",
         treatments: [
-          {
-            name: "Hyal80（初回限定or同日２本目〜or4ヶ月以内リピート）",
-            price: 55000,
-            vipPrice: 55000,
-            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
-          },
-          {
-            name: "Hyal80",
-            price: 77000,
-            vipPrice: 55000,
-            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
-          },
-          {
-            name: "GOURI 液体糸リフト 1cc（首 推奨）",
-            price: 69000,
-            vipPrice: 59000,
-            description: "1ヶ月以内の同容量リピート価格：一般 55,000円 / VIP 47,000円",
-          },
-          {
-            name: "GOURI 液体糸リフト 2cc（顔 推奨）",
-            price: 129000,
-            vipPrice: 115000,
-            description: "1ヶ月以内の同容量リピート価格：一般 103,000円 / VIP 92,000円",
-          },
-          {
-            name: "GOURI 液体糸リフト 3cc",
-            price: 165000,
-            vipPrice: 148000,
-            description: "1ヶ月以内の同容量リピート価格：一般 132,000円 / VIP 118,000円",
-          },
-          {
-            name: "GOURI 液体糸リフト 4cc（手 推奨）",
-            price: 199000,
-            vipPrice: 176000,
-            description: "1ヶ月以内の同容量リピート価格：一般 159,000円 / VIP 141,000円",
-          },
+          { name: "プロファイロ（初回限定）", price: 77000, vipPrice: 55000, description: "魔法のように引き上がる" },
+          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
           { name: "ヒアルロン酸 1本", price: 77000, vipPrice: 60500, description: "" },
           {
             name: "HIFU（顔＋首）",
@@ -132,6 +98,7 @@ const categories = [
             description: "ポニーテールをした時のようなリフトアップ",
           },
           { name: "脂肪溶解注射（１cc）", price: 2750, vipPrice: 1750, description: "口横のポニョに" },
+          { name: "糸モノリフト １０本～", price: 39600, vipPrice: 33000, description: "肌の引き締め" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "" },
           {
             name: "エクソソーム＋ボライト",
@@ -143,7 +110,7 @@ const categories = [
         recommendations: [
           {
             type: "おすすめ治療",
-            items: [{ name: "Hyal80（初回限定or同日２本目〜or4ヶ月以内リピート）" }],
+            items: [{ name: "プロファイロ（初回限定）" }],
           },
         ],
       },
@@ -401,7 +368,7 @@ const categories = [
             name: "マッサージピーリング１回",
             price: 11000,
             vipPrice: 9900,
-            description: "コウ��酸でメラニンの生成抑制（おすすめ：レーザーとの併用）",
+            description: "コウジ酸でメラニンの生成抑制（おすすめ：レーザーとの併用）",
           },
           { name: "マッサージピーリング５回", price: 46200, vipPrice: 44000, description: "単回治療より8800円お得" },
           {
@@ -907,7 +874,7 @@ const categories = [
             name: "エレクトロポレーション薬剤アップグレード→エクソソーム",
             price: 11000,
             vipPrice: 11000,
-            description: "強い肌荒れ��慢性炎症にも効果を出したい時に",
+            description: "強い肌荒れや慢性炎症にも効果を出したい時に",
           },
           {
             name: "ボライト（全顔）",
@@ -1114,7 +1081,7 @@ const categories = [
             description: "二の腕を注射だけで細くしていきます",
           },
           {
-            name: "冷却HIFU（１回���",
+            name: "冷却HIFU（１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼなくたるみを改善します",
