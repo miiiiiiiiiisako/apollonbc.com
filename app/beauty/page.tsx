@@ -267,30 +267,54 @@ export default function Home() {
 
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="space-y-6">
-              <div className="border-l-4 border-pink-400 pl-4">
+              <div className="border-l-4 border-[#b89e69] pl-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-500">2026.02.05〜2026.03.31</span>
-                  <span className="px-2 py-1 bg-pink-100 text-pink-800 text-xs rounded-full">期間限定</span>
+                  <span className="text-sm text-gray-500">2026.05〜2026.08</span>
+                  <span className="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">期間限定</span>
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-3 text-lg">花粉症肌荒れ前に！肌のお守りボライトキャンペーン</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  ボライト治療を受けられた方は、小顔ボトックスが最大50％オフになります！
-                </p>
+                <h3 className="font-semibold text-gray-800 mb-3 text-lg">夏の大感謝キャンペーンと不在期間のお知らせ</h3>
 
-                <div className="bg-pink-50 p-4 rounded-md mb-4">
-                  <p className="text-sm text-gray-700 font-medium mb-2">【割引内容】</p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>・ボライト1本ご購入：小顔ボトックス <span className="font-semibold text-pink-600">20％オフ</span></li>
-                    <li>・ボライト2本ご購入：小顔ボトックス <span className="font-semibold text-pink-600">40％オフ</span></li>
-                    <li>・ボライト3本ご購入：小顔ボトックス <span className="font-semibold text-pink-600">50％オフ</span></li>
-                  </ul>
+                <div className="space-y-4 text-sm text-gray-700">
+                  <div>
+                    <p className="font-semibold mb-2">■ 不在期間</p>
+                    <ul className="space-y-1 ml-2">
+                      <li>・6/23〜7/13：イタリア（ボローニャ学会）</li>
+                      <li>・7/25〜8/5：カナダ（ハープのワールドハープコングレス）</li>
+                    </ul>
+                  </div>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    この間は診療日・予約枠が少なくなり、ご希望どおりのご予約が取りづらくなる可能性があります。<br />
+                    ご不便・ご迷惑をおかけしてしまい、本当に申し訳ございません。<br />
+                    その代わりと言ってはなんですが…<br />
+                    <span className="font-semibold text-[#b89e69]">【5〜8月限定の「夏の大感謝キャンペーン」】</span>をかなり盛りだくさんでご用意しました。
+                  </p>
+
+                  <div className="bg-amber-50 p-4 rounded-md">
+                    <p className="font-semibold text-gray-800 mb-3 border-b border-amber-200 pb-2">◆ 背中（5〜8月）</p>
+                    <ul className="space-y-2">
+                      <li>
+                        <p className="font-medium">・背中美人・殺菌レーザーコース</p>
+                        <p className="ml-3 text-gray-600">27,500円 → <span className="font-semibold text-[#b89e69]">19,800円</span>（5〜7月）</p>
+                        <p className="ml-3 text-gray-600">3回セット <span className="font-semibold text-[#b89e69]">55,000円</span>（8月末までに3回使用）</p>
+                      </li>
+                      <li>
+                        <p className="font-medium">・背中つるんとマヌカピーリング</p>
+                        <p className="ml-3 text-gray-600">5〜8月は、何回受けても毎回 <span className="font-semibold text-[#b89e69]">16,500円</span></p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mt-4">
+                    <p className="text-gray-600 mb-2">このほかにも、</p>
+                    <ul className="space-y-1 ml-2 text-gray-600">
+                      <li>・6〜7月：夏3ヶ月・肌育プラン／夏ボトックス</li>
+                      <li>・6〜8月：肌育プランの使用期間</li>
+                      <li>・8月：ヒアルロン酸キャンペーン</li>
+                    </ul>
+                    <p className="mt-2 text-gray-600">などを予定しています。<br />上記三つの詳細は順次公開いたします。</p>
+                  </div>
                 </div>
-
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  花粉症シーズン前に、肌のバリア機能を高めるボライトで、
-                  <br />
-                  美しく健やかな肌を手に入れましょう。
-                </p>
               </div>
             </div>
 
