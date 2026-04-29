@@ -226,6 +226,77 @@ const categories = [
           },
         ],
       },
+      {
+        title: "糸リフト治療",
+        treatments: [
+          {
+            name: "Dr.K Threads糸リフト 6本コース（ベーシック手技／顔）",
+            price: 240000,
+            vipPrice: 190000,
+            description: "糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。追加糸 1本 25,000円。",
+          },
+          {
+            name: "ミントリフト糸リフト 6本コース（ベーシック手技／顔）",
+            price: 280000,
+            vipPrice: 230000,
+            description: "糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。追加糸 1本 30,000円。",
+          },
+          {
+            name: "ミントリフト糸リフト 6本コース（アドバンス手技／顔）",
+            price: 320000,
+            vipPrice: 270000,
+            description: "糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。追加糸 1本 40,000円。",
+          },
+          {
+            name: "鼻スレッドリフト（Dr.K）",
+            price: 99000,
+            vipPrice: 77000,
+            description: "本数はデザインに応じて医師が決定。糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。",
+          },
+          {
+            name: "鼻スレッドリフト（ミント）",
+            price: 143000,
+            vipPrice: 99000,
+            description: "本数はデザインに応じて医師が決定。糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。",
+          },
+          {
+            name: "ショッピングリフト 10本（初回限定）",
+            price: 27500,
+            vipPrice: 24500,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 20本",
+            price: 66000,
+            vipPrice: 59400,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 40本",
+            price: 114400,
+            vipPrice: 99000,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 60本",
+            price: 168300,
+            vipPrice: 102960,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 80本",
+            price: 220000,
+            vipPrice: 198000,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 100本",
+            price: 269500,
+            vipPrice: 242550,
+            description: "麻酔代別。",
+          },
+        ],
+      },
     ],
   },
   {
@@ -684,11 +755,11 @@ const categories = [
             price: 8800,
             vipPrice: 8800,
             description:
-              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③施術後のマッサージピーリング（複数選択可）",
+              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③��術後のマッサージピーリング（複数選択可）",
           },
           { name: "ダーマペンオプション２つ", price: 14300, vipPrice: 14300, description: "" },
           { name: "ダーマペンオプション３つ", price: 19800, vipPrice: 19800, description: "" },
-          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダウンタイムを短く" },
+          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダ��ンタイムを短く" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           {
             name: "ボライト（全顔）",
