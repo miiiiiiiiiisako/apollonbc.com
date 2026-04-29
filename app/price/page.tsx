@@ -88,8 +88,42 @@ const categories = [
       {
         title: "たるみ治療",
         treatments: [
-          { name: "プロファイロ（初回限定）", price: 77000, vipPrice: 55000, description: "魔法のように引き上がる" },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
+          {
+            name: "Hyal80(初回限定or同日２本目〜or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
+            price: 77000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
+          },
+          {
+            name: "GOURI 液体糸リフト 1cc（首 推奨）",
+            price: 69000,
+            vipPrice: 59000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 2cc（顔 推奨）",
+            price: 129000,
+            vipPrice: 115000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 3cc",
+            price: 165000,
+            vipPrice: 148000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 4cc（手 推奨）",
+            price: 199000,
+            vipPrice: 176000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
           { name: "ヒアルロン酸 1本", price: 77000, vipPrice: 60500, description: "" },
           {
             name: "HIFU（顔＋首）",
@@ -98,7 +132,6 @@ const categories = [
             description: "ポニーテールをした時のようなリフトアップ",
           },
           { name: "脂肪溶解注射（１cc）", price: 2750, vipPrice: 1750, description: "口横のポニョに" },
-          { name: "糸モノリフト １０本～", price: 39600, vipPrice: 33000, description: "肌の引き締め" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "" },
           {
             name: "エクソソーム＋ボライト",
@@ -110,7 +143,7 @@ const categories = [
         recommendations: [
           {
             type: "おすすめ治療",
-            items: [{ name: "プロファイロ（初回限定）" }],
+            items: [{ name: "Hyal80(初回限定or同日２本目〜or4ヶ月以内リピート)" }],
           },
         ],
       },
@@ -167,7 +200,7 @@ const categories = [
             name: "顎ボトックス",
             price: 15400,
             vipPrice: 11000,
-            description: "梅干し皺をなくしてフェイスラインを綺麗に",
+            description: "梅���し皺をなくしてフェイスラインを綺麗に",
           },
           { name: "額ボトックス", price: 17600, vipPrice: 14300, description: "額のシワと皮脂を改善" },
           {
@@ -520,7 +553,7 @@ const categories = [
             name: "エクソリューション・ダーマリバイブ（５回）",
             price: 247500,
             vipPrice: 198000,
-            description: "単回治療より55000円お得",
+            description: "単回治療よ��55000円お得",
           },
           { name: "マヌカミラクルリフレッシュ（初回限定）", price: 29700, vipPrice: 25850, description: "" },
           {
@@ -1081,7 +1114,7 @@ const categories = [
             description: "二の腕を注射だけで細くしていきます",
           },
           {
-            name: "冷却HIFU（１回）",
+            name: "冷却HIFU��１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼなくたるみを改善します",
@@ -1282,7 +1315,7 @@ const categories = [
           { name: "ダーマペン（５回）", price: 198000, vipPrice: 159500, description: "単回治療より22000円お得に" },
           { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 66000, vipPrice: 55000, description: "" },
           {
-            name: "エクソリューション・ダーマリバイブ（１回）",
+            name: "エクソリューショ���・ダーマリバイブ（１回）",
             price: 99000,
             vipPrice: 77000,
             description: "エクソソームとダーマペンで肌を生まれかわらせましょう",
