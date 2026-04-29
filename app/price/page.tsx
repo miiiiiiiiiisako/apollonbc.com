@@ -1260,6 +1260,12 @@ const categories = [
             vipPrice: 44000,
             description: "単回治療より8800円お得",
           },
+          {
+            name: "黒ずみ改善レーザー",
+            price: 27500,
+            vipPrice: 22000,
+            description: "体の黒ずみ改善に",
+          },
         ],
         recommendations: [
           {
@@ -1377,6 +1383,12 @@ const categories = [
             price: 27500,
             vipPrice: 22000,
             description: "レーザーで殺菌を行いニキビの原因にアプローチ",
+          },
+          {
+            name: "黒ずみ改善レーザー",
+            price: 27500,
+            vipPrice: 22000,
+            description: "体の黒ずみ改善に",
           },
         ],
         recommendations: [
