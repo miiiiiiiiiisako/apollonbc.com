@@ -328,6 +328,30 @@ const categories = [
             vipPrice: 242550,
             description: "麻酔代別。",
           },
+          {
+            name: "GOURI 液体糸リフト 1cc（首 推奨）",
+            price: 69000,
+            vipPrice: 59000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 2cc（顔 推奨）",
+            price: 129000,
+            vipPrice: 115000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 3cc",
+            price: 165000,
+            vipPrice: 148000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 4cc（手 推奨）",
+            price: 199000,
+            vipPrice: 176000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
         ],
       },
     ],
@@ -530,7 +554,7 @@ const categories = [
             description: "あらゆる肌悩みに効果を出したい時に",
           },
           {
-            name: "エレクトロポレーション薬剤アップグレード→エクソソーム",
+            name: "エレクトロポレーション薬剤アップグレー���→エクソソーム",
             price: 11000,
             vipPrice: 11000,
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
@@ -1080,7 +1104,7 @@ const categories = [
             name: "高濃度ビタミンC（１０g）",
             price: 7700,
             vipPrice: 6600,
-            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
+            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効��覿面",
           },
           {
             name: "高濃度ビタミンC（２０g）",
@@ -1088,7 +1112,7 @@ const categories = [
             vipPrice: 8800,
             description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
           },
-          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査です" },
+          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査���す" },
         ],
         recommendations: [],
       },
@@ -1485,7 +1509,7 @@ const categories = [
         title: "黒ずみ・色素沈着（身体）治療",
         treatments: [
           {
-            name: "マヌカピーリング",
+            name: "���ヌカピーリング",
             price: "部位により異なります",
             vipPrice: "部位により異なります",
             description: "マヌカハニーで保湿・抗菌・抗炎症しながらいらない角質除去/できものや荒れ・色素沈着に",
