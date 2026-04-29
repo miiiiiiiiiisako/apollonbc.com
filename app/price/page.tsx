@@ -360,7 +360,8 @@ const categories = [
     name: "肌治療",
     mainTitles: [
       {
-        title: "OMNI Laser治療　肌悩み全て解決",
+        title: "OMNI Laser治療　肌悩み全て解決（顔・身体）",
+        note: "身体の料金は部位によって異なります。ご相談ください。",
         treatments: [
           {
             name: "Omniカスタマイズレーザー",
@@ -1485,7 +1486,7 @@ const categories = [
           },
           { name: "脂肪溶解注射（1cc）", price: 2750, vipPrice: 1750, description: "脂肪をなくしてすっきりした足に" },
           {
-            name: "冷却HIFU（１回）",
+            name: "冷却HIFU（１回���",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼない脂肪の燃焼治療",
@@ -1493,7 +1494,7 @@ const categories = [
           { name: "冷却HIFU（３回）", price: 132000, vipPrice: 89100, description: "" },
           { name: "冷却HIFU（１０回）", price: 385000, vipPrice: 275000, description: "" },
           {
-            name: "マッサージピーリング（１回）",
+            name: "��ッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
             description: "妊娠線などのシワを改善(１回：２０cm＊２０cmの治療範囲以内)",
@@ -1643,6 +1644,11 @@ return (
 
                       {expandedMainTitle === mainTitle.title && (
                         <div className="bg-white">
+                          {mainTitle.note && (
+                            <div className="px-6 py-3 bg-[#fdf8f0] border-b border-[#e8e0d0] text-sm text-gray-600">
+                              {mainTitle.note}
+                            </div>
+                          )}
                           <div className="overflow-x-auto">
                             <table className="w-full">
                               <thead className="bg-[#f8f4ec]">
