@@ -88,8 +88,42 @@ const categories = [
       {
         title: "たるみ治療",
         treatments: [
-          { name: "プロファイロ（初回限定）", price: 77000, vipPrice: 55000, description: "魔法のように引き上がる" },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
+          {
+            name: "Hyal80(初回限定or同日２本目〜or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
+            price: 77000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
+          },
+          {
+            name: "GOURI 液体糸リフト 1cc（首 推奨）",
+            price: 69000,
+            vipPrice: 59000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 2cc（顔 推奨）",
+            price: 129000,
+            vipPrice: 115000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 3cc",
+            price: 165000,
+            vipPrice: 148000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 4cc（手 推奨）",
+            price: 199000,
+            vipPrice: 176000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
           { name: "ヒアルロン酸 1本", price: 77000, vipPrice: 60500, description: "" },
           {
             name: "HIFU（顔＋首）",
@@ -98,7 +132,6 @@ const categories = [
             description: "ポニーテールをした時のようなリフトアップ",
           },
           { name: "脂肪溶解注射（１cc）", price: 2750, vipPrice: 1750, description: "口横のポニョに" },
-          { name: "糸モノリフト １０本～", price: 39600, vipPrice: 33000, description: "肌の引き締め" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "" },
           {
             name: "エクソソーム＋ボライト",
@@ -110,7 +143,7 @@ const categories = [
         recommendations: [
           {
             type: "おすすめ治療",
-            items: [{ name: "プロファイロ（初回限定）" }],
+            items: [{ name: "Hyal80(初回限定or同日２本目〜or4ヶ月以内リピート)" }],
           },
         ],
       },
@@ -167,7 +200,7 @@ const categories = [
             name: "顎ボトックス",
             price: 15400,
             vipPrice: 11000,
-            description: "梅干し皺をなくしてフェイスラインを綺麗に",
+            description: "梅���し皺をなくしてフェイスラインを綺麗に",
           },
           { name: "額ボトックス", price: 17600, vipPrice: 14300, description: "額のシワと皮脂を改善" },
           {
@@ -226,13 +259,109 @@ const categories = [
           },
         ],
       },
+      {
+        title: "糸リフト治療",
+        treatments: [
+          {
+            name: "Dr.K Threads糸リフト 6本コース（ベーシック手技／顔）",
+            price: 240000,
+            vipPrice: 190000,
+            description: "糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。追加糸 1本 25,000円。",
+          },
+          {
+            name: "ミントリフト糸リフト 6本コース（ベーシック手技／顔）",
+            price: 280000,
+            vipPrice: 230000,
+            description: "糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。追加糸 1本 30,000円。",
+          },
+          {
+            name: "ミントリフト糸リフト 6本コース（アドバンス手技／顔）",
+            price: 320000,
+            vipPrice: 270000,
+            description: "糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。追加糸 1本 40,000円。",
+          },
+          {
+            name: "鼻スレッドリフト（Dr.K）",
+            price: 99000,
+            vipPrice: 77000,
+            description: "本数はデザインに応じて医師が決定。糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。",
+          },
+          {
+            name: "鼻スレッドリフト（ミント）",
+            price: 143000,
+            vipPrice: 99000,
+            description: "本数はデザインに応じて医師が決定。糸代・麻酔代・薬剤・消耗品・処置料・衛生管理費すべて込み。",
+          },
+          {
+            name: "ショッピングリフト 10本（初回限定）",
+            price: 27500,
+            vipPrice: 24500,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 20本",
+            price: 66000,
+            vipPrice: 59400,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 40本",
+            price: 114400,
+            vipPrice: 99000,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 60本",
+            price: 168300,
+            vipPrice: 102960,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 80本",
+            price: 220000,
+            vipPrice: 198000,
+            description: "麻酔代別。",
+          },
+          {
+            name: "ショッピングリフト 100本",
+            price: 269500,
+            vipPrice: 242550,
+            description: "麻酔代別。",
+          },
+          {
+            name: "GOURI 液体糸リフト 1cc（首 推奨）",
+            price: 69000,
+            vipPrice: 59000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 2cc（顔 推奨）",
+            price: 129000,
+            vipPrice: 115000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 3cc",
+            price: 165000,
+            vipPrice: 148000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+          {
+            name: "GOURI 液体糸リフト 4cc（手 推奨）",
+            price: 199000,
+            vipPrice: 176000,
+            description: "1ヶ月以内の同容量リピート価格：20%引き",
+          },
+        ],
+      },
     ],
   },
   {
     name: "肌治療",
     mainTitles: [
       {
-        title: "OMNI Laser治療　肌悩み全て解決",
+        title: "OMNI Laser治療　肌悩み全て解決（顔・身体）",
+        note: "身体の料金は部位によって異なります。ご相談ください。",
         treatments: [
           {
             name: "Omniカスタマイズレーザー",
@@ -426,7 +555,7 @@ const categories = [
             description: "あらゆる肌悩みに効果を出したい時に",
           },
           {
-            name: "エレクトロポレーション薬剤アップグレード→エクソソーム",
+            name: "エレクトロポレーション薬剤アップグレー���→エクソソーム",
             price: 11000,
             vipPrice: 11000,
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
@@ -449,7 +578,7 @@ const categories = [
             name: "エクソリューション・ダーマリバイブ（５回）",
             price: 247500,
             vipPrice: 198000,
-            description: "単回治療より55000円お得",
+            description: "単回治療よ��55000円お得",
           },
           { name: "マヌカミラクルリフレッシュ（初回限定）", price: 29700, vipPrice: 25850, description: "" },
           {
@@ -684,11 +813,11 @@ const categories = [
             price: 8800,
             vipPrice: 8800,
             description:
-              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③施術後のマッサージピーリング（複数選択可）",
+              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③��術後のマッサージピーリング（複数選択可）",
           },
           { name: "ダーマペンオプション２つ", price: 14300, vipPrice: 14300, description: "" },
           { name: "ダーマペンオプション３つ", price: 19800, vipPrice: 19800, description: "" },
-          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダウンタイムを短く" },
+          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダ��ンタイムを短く" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           {
             name: "ボライト（全顔）",
@@ -976,7 +1105,7 @@ const categories = [
             name: "高濃度ビタミンC（１０g）",
             price: 7700,
             vipPrice: 6600,
-            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
+            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効��覿面",
           },
           {
             name: "高濃度ビタミンC（２０g）",
@@ -984,7 +1113,7 @@ const categories = [
             vipPrice: 8800,
             description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
           },
-          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査です" },
+          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査���す" },
         ],
         recommendations: [],
       },
@@ -1010,7 +1139,7 @@ const categories = [
             description: "二の腕を注射だけで細くしていきます",
           },
           {
-            name: "冷却HIFU（１回）",
+            name: "冷却HIFU��１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼなくたるみを改善します",
@@ -1132,6 +1261,12 @@ const categories = [
             vipPrice: 44000,
             description: "単回治療より8800円お得",
           },
+          {
+            name: "黒ずみ改善レーザー",
+            price: 27500,
+            vipPrice: 22000,
+            description: "体の黒ずみ改善に",
+          },
         ],
         recommendations: [
           {
@@ -1211,7 +1346,7 @@ const categories = [
           { name: "ダーマペン（５回）", price: 198000, vipPrice: 159500, description: "単回治療より22000円お得に" },
           { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 66000, vipPrice: 55000, description: "" },
           {
-            name: "エクソリューション・ダーマリバイブ（１回）",
+            name: "エクソリューショ���・ダーマリバイブ（１回）",
             price: 99000,
             vipPrice: 77000,
             description: "エクソソームとダーマペンで肌を生まれかわらせましょう",
@@ -1249,6 +1384,12 @@ const categories = [
             price: 27500,
             vipPrice: 22000,
             description: "レーザーで殺菌を行いニキビの原因にアプローチ",
+          },
+          {
+            name: "黒ずみ改善レーザー",
+            price: 27500,
+            vipPrice: 22000,
+            description: "体の黒ずみ改善に",
           },
         ],
         recommendations: [
@@ -1345,7 +1486,7 @@ const categories = [
           },
           { name: "脂肪溶解注射（1cc）", price: 2750, vipPrice: 1750, description: "脂肪をなくしてすっきりした足に" },
           {
-            name: "冷却HIFU（１回）",
+            name: "冷却HIFU（１回���",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼない脂肪の燃焼治療",
@@ -1353,7 +1494,7 @@ const categories = [
           { name: "冷却HIFU（３回）", price: 132000, vipPrice: 89100, description: "" },
           { name: "冷却HIFU（１０回）", price: 385000, vipPrice: 275000, description: "" },
           {
-            name: "マッサージピーリング（１回）",
+            name: "��ッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
             description: "妊娠線などのシワを改善(１回：２０cm＊２０cmの治療範囲以内)",
@@ -1381,7 +1522,7 @@ const categories = [
         title: "黒ずみ・色素沈着（身体）治療",
         treatments: [
           {
-            name: "マヌカピーリング",
+            name: "���ヌカピーリング",
             price: "部位により異なります",
             vipPrice: "部位により異なります",
             description: "マヌカハニーで保湿・抗菌・抗炎症しながらいらない角質除去/できものや荒れ・色素沈着に",
@@ -1503,6 +1644,11 @@ return (
 
                       {expandedMainTitle === mainTitle.title && (
                         <div className="bg-white">
+                          {mainTitle.note && (
+                            <div className="px-6 py-3 bg-[#fdf8f0] border-b border-[#e8e0d0] text-sm text-gray-600">
+                              {mainTitle.note}
+                            </div>
+                          )}
                           <div className="overflow-x-auto">
                             <table className="w-full">
                               <thead className="bg-[#f8f4ec]">
