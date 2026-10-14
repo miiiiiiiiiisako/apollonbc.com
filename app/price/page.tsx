@@ -200,7 +200,7 @@ const categories = [
             name: "顎ボトックス",
             price: 15400,
             vipPrice: 11000,
-            description: "梅���し皺をなくしてフェイスラインを綺麗に",
+            description: "梅干し皺をなくしてフェイスラインを綺麗に",
           },
           { name: "額ボトックス", price: 17600, vipPrice: 14300, description: "額のシワと皮脂を改善" },
           {
@@ -360,6 +360,16 @@ const categories = [
     name: "肌治療",
     mainTitles: [
       {
+        title: "水光注射",
+        treatments: [
+          { name: "NeoFound", price: 38500, vipPrice: 29000, description: "しぼんだ皮膚を若返らせながらシミ肝斑改善" },
+          { name: "リジュラン", price: 38500, vipPrice: 27500, description: "小ジワ改善" },
+          { name: "Save eyes", price: 27500, vipPrice: 19800, description: "小ジワ改善" },
+          { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
+          { name: "エクソソーム", price: 82500, vipPrice: 60500, description: "1v。安全性確保のため当院ではエクソソーム点滴は行いません" },
+        ],
+      },
+      {
         title: "OMNI Laser治療　肌悩み全て解決（顔・身体）",
         note: "身体の料金は部位によって異なります。ご相談ください。",
         treatments: [
@@ -368,7 +378,7 @@ const categories = [
             price: 34800,
             vipPrice: 29800,
             description:
-              "肌状態から最適なレーザーを組み合わせて��射（フラクショナル追加は＋3,000円／VIPは＋2,600円）",
+              "肌状態から最適なレーザーを組み合わせて照射（フラクショナル追加は＋3,000円／VIPは＋2,600円）",
           },
           { name: "シミスポット１cm*１cm", price: 2750, vipPrice: 1980, description: "" },
           { name: "シミ取り放題", price: 39800, vipPrice: 35200, description: "パック付" },
@@ -385,7 +395,7 @@ const categories = [
         ],
         recommendations: [
           {
-            type: "シミ・色素沈着治療�����",
+            type: "シミ・色素沈着治療の薬",
             items: [
               { name: "トレチノイン0.05%", price: 2750 },
               { name: "トレチノイン0.1%", price: 3300 },
@@ -555,7 +565,7 @@ const categories = [
             description: "あらゆる肌悩みに効果を出したい時に",
           },
           {
-            name: "エレクトロポレーション薬剤アップグレー���→エクソソーム",
+            name: "エレクトロポレーション薬剤アップグレード→エクソソーム",
             price: 11000,
             vipPrice: 11000,
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
@@ -578,7 +588,7 @@ const categories = [
             name: "エクソリューション・ダーマリバイブ（５回）",
             price: 247500,
             vipPrice: 198000,
-            description: "単回治療よ��55000円お得",
+            description: "単回治療より55000円お得",
           },
           { name: "マヌカミラクルリフレッシュ（初回限定）", price: 29700, vipPrice: 25850, description: "" },
           {
@@ -813,11 +823,11 @@ const categories = [
             price: 8800,
             vipPrice: 8800,
             description:
-              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③��術後のマッサージピーリング（複数選択可）",
+              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③施術後のマッサージピーリング（複数選択可）",
           },
           { name: "ダーマペンオプション２つ", price: 14300, vipPrice: 14300, description: "" },
           { name: "ダーマペンオプション３つ", price: 19800, vipPrice: 19800, description: "" },
-          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダ��ンタイムを短く" },
+          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダウンタイムを短く" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           {
             name: "スキンバイブ（全顔）（旧ボライト）",
@@ -1064,7 +1074,7 @@ const categories = [
     name: "痩身",
     mainTitles: [
       {
-        title: "痩��治療",
+        title: "痩身治療",
         treatments: [
           { name: "脂肪溶解注射（1cc）", price: 2750, vipPrice: 1750, description: "脂肪を溶かして撃退" },
           {
@@ -1105,7 +1115,7 @@ const categories = [
             name: "高濃度ビタミンC（１０g）",
             price: 7700,
             vipPrice: 6600,
-            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効��覿面",
+            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
           },
           {
             name: "高濃度ビタミンC（２０g）",
@@ -1113,7 +1123,7 @@ const categories = [
             vipPrice: 8800,
             description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
           },
-          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査���す" },
+          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査です" },
         ],
         recommendations: [],
       },
@@ -1139,7 +1149,7 @@ const categories = [
             description: "二の腕を注射だけで細くしていきます",
           },
           {
-            name: "冷却HIFU��１回）",
+            name: "冷却HIFU（１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼなくたるみを改善します",
@@ -1346,7 +1356,7 @@ const categories = [
           { name: "ダーマペン（５回）", price: 198000, vipPrice: 159500, description: "単回治療より22000円お得に" },
           { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 66000, vipPrice: 55000, description: "" },
           {
-            name: "エクソリューショ���・ダーマリバイブ（１回）",
+            name: "エクソリューション・ダーマリバイブ（１回）",
             price: 99000,
             vipPrice: 77000,
             description: "エクソソームとダーマペンで肌を生まれかわらせましょう",
@@ -1470,7 +1480,7 @@ const categories = [
     name: "ふくらはぎ",
     mainTitles: [
       {
-        title: "ふくらは���治療",
+        title: "ふくらはぎ治療",
         treatments: [
           {
             name: "ふくらはぎボトックス（１００単位）",
@@ -1486,7 +1496,7 @@ const categories = [
           },
           { name: "脂肪溶解注射（1cc）", price: 2750, vipPrice: 1750, description: "脂肪をなくしてすっきりした足に" },
           {
-            name: "冷却HIFU（１回���",
+            name: "冷却HIFU（１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼない脂肪の燃焼治療",
@@ -1494,7 +1504,7 @@ const categories = [
           { name: "冷却HIFU（３回）", price: 132000, vipPrice: 89100, description: "" },
           { name: "冷却HIFU（１０回）", price: 385000, vipPrice: 275000, description: "" },
           {
-            name: "��ッサージピーリング（１回）",
+            name: "マッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
             description: "妊娠線などのシワを改善(１回：２０cm＊２０cmの治療範囲以内)",
@@ -1522,7 +1532,7 @@ const categories = [
         title: "黒ずみ・色素沈着（身体）治療",
         treatments: [
           {
-            name: "���ヌカピーリング",
+            name: "マヌカピーリング",
             price: "部位により異なります",
             vipPrice: "部位により異なります",
             description: "マヌカハニーで保湿・抗菌・抗炎症しながらいらない角質除去/できものや荒れ・色素沈着に",
