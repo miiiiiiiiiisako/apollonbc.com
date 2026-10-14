@@ -184,7 +184,7 @@ const categories = [
           { name: "スーパー小顔ボトックス（７５単位）", price: 52800, vipPrice: 41800, description: "" },
           { name: "エラボトックス（５０単位）", price: 39600, vipPrice: 34650, description: "修正１０単位まで" },
           { name: "小顔＋エラボトックス（１００単位）", price: 74800, vipPrice: 69300, description: "" },
-          { name: "スーパー小顔＋エラボトックス（１２５単位）", price: 85800, vipPrice: 76450, description: "" },
+          { name: "スーパー小顔＋エラボトックス（１２５��位）", price: 85800, vipPrice: 76450, description: "" },
           { name: "口角ボトックス", price: 15400, vipPrice: 11000, description: "下がった口角を上向きに" },
           { name: "ガミースマイルボトックス", price: 15400, vipPrice: 11000, description: "歯茎の見えない笑顔に" },
           {
@@ -982,24 +982,34 @@ const categories = [
         title: "首のボリューム改善・たるみ治療",
         treatments: [
           {
-            name: "プロファイロ（初回限定）",
+            name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
             price: 77000,
             vipPrice: 55000,
-            description: "自己組織の活性化を利用して痩せた首のボリュームを戻します",
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
           },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
           { name: "ヒアルロン酸１本", price: 77000, vipPrice: 60500, description: "デザインしながら首を綺麗に" },
           { name: "HIFU（顔＋首）", price: 44000, vipPrice: 38500, description: "首から額までリフトアップ" },
           { name: "脂肪溶解注射(１cc)", price: 2750, vipPrice: 1750, description: "フェイスラインの脂肪を撃退" },
           { name: "糸モノリフト１０本〜", price: 39600, vipPrice: 33000, description: "" },
           { name: "首ボトックス＊", price: 39600, vipPrice: 34650, description: "首の縦シワ改善" },
-          { name: "ボライト", price: 77000, vipPrice: 60500, description: "首の横シワ改善" },
+          {
+            name: "スキンバイブ〜首横じわ改善〜",
+            price: 165000,
+            vipPrice: 144000,
+            description: "1ヶ月以内のリピートは10,000円引き",
+          },
         ],
         recommendations: [
           {
             type: "首おすすめ治療",
             items: [
-              { name: "プロファイロ（初回限定）", price: 39600 },
+              { name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)", price: 55000 },
               { name: "糸モノリフト１０本〜", price: 110000 },
             ],
           },
@@ -1009,12 +1019,17 @@ const categories = [
         title: "デコルテ治療",
         treatments: [
           {
-            name: "プロファイロ（初回限定）",
+            name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
             price: 77000,
             vipPrice: 55000,
-            description: "自己組織の活性化を利用してデコルテのハリを改善",
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
           },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
           {
             name: "ヒアルロン酸１本",
             price: 77000,
@@ -1039,7 +1054,7 @@ const categories = [
           {
             type: "デコルテおすすめ治療",
             items: [
-              { name: "プロファイロ（初回限定）", price: 77000 },
+              { name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)", price: 55000 },
               { name: "マッサージピーリング（５回）", price: 46200 },
             ],
           },
@@ -1136,12 +1151,17 @@ const categories = [
         title: "二の腕・毛孔性苔癬治療",
         treatments: [
           {
-            name: "プロファイロ（初回限定）",
+            name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
             price: 77000,
             vipPrice: 55000,
-            description: "二の腕のたるみとシワを改善",
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
           },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
           {
             name: "脂肪溶解注射(１cc)",
             price: 2750,
@@ -1272,7 +1292,7 @@ const categories = [
             description: "単回治療より8800円お得",
           },
           {
-            name: "黒ずみ改善レーザー",
+            name: "黒ずみ改善レーザ���",
             price: 27500,
             vipPrice: 22000,
             description: "体の黒ずみ改善に",
@@ -1455,7 +1475,7 @@ const categories = [
             name: "マッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
-            description: "妊娠線などのシワを改善(１回：２０cm＊２０cmの治療範囲以内)",
+            description: "妊娠線などのシワを改善(１回：２���cm＊２０cmの治療範囲以内)",
           },
           {
             name: "マッサージピーリング（５回）",
