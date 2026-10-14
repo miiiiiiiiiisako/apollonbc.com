@@ -363,8 +363,11 @@ const categories = [
         title: "水光注射",
         treatments: [
           { name: "NeoFound", price: 38500, vipPrice: 29000, description: "しぼんだ皮膚を若返らせながらシミ肝斑改善" },
+          { name: "NeoFound3回", price: 99000, vipPrice: 85000, description: "単回治療より16500円お得" },
           { name: "リジュラン", price: 38500, vipPrice: 27500, description: "小ジワ改善" },
+          { name: "リジュラン４回", price: 144200, vipPrice: 110000, description: "単回治療より9800円お得" },
           { name: "Save eyes", price: 27500, vipPrice: 19800, description: "小ジワ改善" },
+          { name: "Save eyes４回", price: 99000, vipPrice: 79200, description: "単回治療より10800円お得" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           { name: "エクソソーム", price: 82500, vipPrice: 60500, description: "1v。安全性確保のため当院ではエクソソーム点滴は行いません" },
         ],
@@ -1539,7 +1542,7 @@ const categories = [
         recommendations: [
           {
             type: "ふくらはぎおすすめ治療",
-            items: [{ name: "スーパーふくらはぎボトックス（１５０単位）", price: 110000 }],
+            items: [{ name: "スーパーふくらは���ボトックス（１５０単位）", price: 110000 }],
           },
         ],
       },
