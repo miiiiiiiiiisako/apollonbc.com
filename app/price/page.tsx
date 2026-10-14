@@ -385,7 +385,7 @@ const categories = [
         ],
         recommendations: [
           {
-            type: "シミ・色素沈着治療の��",
+            type: "シミ・色素沈着治療�����",
             items: [
               { name: "トレチノイン0.05%", price: 2750 },
               { name: "トレチノイン0.1%", price: 3300 },
@@ -708,7 +708,7 @@ const categories = [
           },
           { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
           { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
-          { name: "スキンバイブ（追加）（旧ボライト）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 64000, vipPrice: 43000, description: "肌状態をみながらご相談" },
         ],
         recommendations: [
           {
@@ -866,7 +866,7 @@ const categories = [
           },
           { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
           { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
-          { name: "スキンバイブ（追加）（旧ボライト）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 64000, vipPrice: 43000, description: "肌状態をみながらご相談" },
           {
             name: "エレクトロポレーション（１回）",
             price: 16500,
@@ -942,7 +942,7 @@ const categories = [
           },
           { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
           { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
-          { name: "スキンバイブ（追加）（旧ボライト）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 64000, vipPrice: 43000, description: "肌状態をみながらご相談" },
           { name: "赤み取りレーザー", price: 15400, vipPrice: 9900, description: "毛細血管の拡張を抑えます" },
         ],
         recommendations: [
@@ -1064,7 +1064,7 @@ const categories = [
     name: "痩身",
     mainTitles: [
       {
-        title: "痩身治療",
+        title: "痩��治療",
         treatments: [
           { name: "脂肪溶解注射（1cc）", price: 2750, vipPrice: 1750, description: "脂肪を溶かして撃退" },
           {
@@ -1470,7 +1470,7 @@ const categories = [
     name: "ふくらはぎ",
     mainTitles: [
       {
-        title: "ふくらはぎ治療",
+        title: "ふくらは���治療",
         treatments: [
           {
             name: "ふくらはぎボトックス（１００単位）",
