@@ -244,7 +244,7 @@ const categories = [
       {
         title: "ヒアルロン酸治療",
         treatments: [
-          { name: "ヒアルロン酸1本", price: 77000, vipPrice: 60500, description: "気になる部分にボリュームを" },
+          { name: "ヒアルロン酸1本", price: 77000, vipPrice: 60500, description: "気になる部分にボリュームを（アップグレード製剤+5500円）" },
           {
             name: "ヒアルロン酸除去（１ccあたり当院）",
             price: 29700,
@@ -368,7 +368,7 @@ const categories = [
             price: 34800,
             vipPrice: 29800,
             description:
-              "肌状態から最適なレーザーを組み合わせて照射（フラクショナル追加は＋3,000円／VIPは＋2,600円）",
+              "肌状態から最適なレーザーを組み合わせて��射（フラクショナル追加は＋3,000円／VIPは＋2,600円）",
           },
           { name: "シミスポット１cm*１cm", price: 2750, vipPrice: 1980, description: "" },
           { name: "シミ取り放題", price: 39800, vipPrice: 35200, description: "パック付" },
@@ -385,7 +385,7 @@ const categories = [
         ],
         recommendations: [
           {
-            type: "シミ・色素沈着治療の薬",
+            type: "シミ・色素沈着治療の��",
             items: [
               { name: "トレチノイン0.05%", price: 2750 },
               { name: "トレチノイン0.1%", price: 3300 },
@@ -605,13 +605,13 @@ const categories = [
           { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダウンタイムを短く" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "美肌用のヒアルロン酸　乾燥・赤み・毛穴凹凸・艶感改善",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
           {
             name: "殺菌レーザー",
             price: 15400,
@@ -624,7 +624,7 @@ const categories = [
             type: "毛穴ニキビ跡おすすめ治療",
             items: [
               { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 39600 },
-              { name: "ボライト（頬のみ）", price: 110000 },
+              { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 },
             ],
           },
           {
@@ -701,21 +701,21 @@ const categories = [
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
           },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "肌に直接水分を入れ込み常に潤った状態に",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
-          { name: "ボライト（追加）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
         ],
         recommendations: [
           {
             type: "小ジワおすすめ治療",
             items: [
               { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 39600 },
-              { name: "ボライト（頬のみ）", price: 110000 },
+              { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 },
             ],
           },
           {
@@ -820,13 +820,13 @@ const categories = [
           { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダ��ンタイムを短く" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "美肌用のヒアルロン酸　乾燥・赤み・毛穴凹凸・艶感改善",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
           {
             name: "殺菌レーザー",
             price: 15400,
@@ -859,14 +859,14 @@ const categories = [
         title: "乾燥治療",
         treatments: [
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "美肌用のヒアルロン酸　乾燥・赤み・毛穴凹凸・艶感改善",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
-          { name: "ボライト(追加)", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
           {
             name: "エレクトロポレーション（１回）",
             price: 16500,
@@ -895,7 +895,7 @@ const categories = [
         recommendations: [
           {
             type: "乾燥治療おすすめ",
-            items: [{ name: "ボライト（頬のみ）", price: 110000 }],
+            items: [{ name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 }],
           },
           {
             type: "乾燥治療おすすめホームケア",
@@ -935,14 +935,14 @@ const categories = [
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
           },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "赤み・毛穴・乾燥すべての改善を１つ＊１回の治療で",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
-          { name: "ボライト（追加）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
           { name: "赤み取りレーザー", price: 15400, vipPrice: 9900, description: "毛細血管の拡張を抑えます" },
         ],
         recommendations: [
@@ -950,7 +950,7 @@ const categories = [
             type: "赤みおすすめ治療",
             items: [
               { name: "赤み取りレーザー", price: 15400 },
-              { name: "ボライト（頬のみ）", price: 110000 },
+              { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 },
             ],
           },
           {
