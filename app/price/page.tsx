@@ -184,7 +184,7 @@ const categories = [
           { name: "スーパー小顔ボトックス（７５単位）", price: 52800, vipPrice: 41800, description: "" },
           { name: "エラボトックス（５０単位）", price: 39600, vipPrice: 34650, description: "修正１０単位まで" },
           { name: "小顔＋エラボトックス（１００単位）", price: 74800, vipPrice: 69300, description: "" },
-          { name: "スーパー小顔＋エラボトックス（１２５単位）", price: 85800, vipPrice: 76450, description: "" },
+          { name: "スーパー小顔＋エラボトックス（１２５��位）", price: 85800, vipPrice: 76450, description: "" },
           { name: "口角ボトックス", price: 15400, vipPrice: 11000, description: "下がった口角を上向きに" },
           { name: "ガミースマイルボトックス", price: 15400, vipPrice: 11000, description: "歯茎の見えない笑顔に" },
           {
@@ -200,7 +200,7 @@ const categories = [
             name: "顎ボトックス",
             price: 15400,
             vipPrice: 11000,
-            description: "梅���し皺をなくしてフェイスラインを綺麗に",
+            description: "梅干し皺をなくしてフェイスラインを綺麗に",
           },
           { name: "額ボトックス", price: 17600, vipPrice: 14300, description: "額のシワと皮脂を改善" },
           {
@@ -244,7 +244,7 @@ const categories = [
       {
         title: "ヒアルロン酸治療",
         treatments: [
-          { name: "ヒアルロン酸1本", price: 77000, vipPrice: 60500, description: "気になる部分にボリュームを" },
+          { name: "ヒアルロン酸1本", price: 77000, vipPrice: 60500, description: "気になる部分にボリュームを（アップグレード製剤+5500円）" },
           {
             name: "ヒアルロン酸除去（１ccあたり当院）",
             price: 29700,
@@ -359,6 +359,19 @@ const categories = [
   {
     name: "肌治療",
     mainTitles: [
+      {
+        title: "水光注射",
+        treatments: [
+          { name: "NeoFound", price: 38500, vipPrice: 29000, description: "しぼんだ皮膚を若返らせながらシミ肝斑改善" },
+          { name: "NeoFound3回", price: 99000, vipPrice: 85000, description: "単回治療より16500円お得" },
+          { name: "リジュラン", price: 38500, vipPrice: 27500, description: "小ジワ改善" },
+          { name: "リジュラン４回", price: 144200, vipPrice: 110000, description: "単回治療より9800円お得" },
+          { name: "Save eyes", price: 27500, vipPrice: 19800, description: "小ジワ改善" },
+          { name: "Save eyes４回", price: 99000, vipPrice: 79200, description: "単回治療より10800円お得" },
+          { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
+          { name: "エクソソーム", price: 82500, vipPrice: 60500, description: "1v。安全性確保のため当院ではエクソソーム点滴は行いません" },
+        ],
+      },
       {
         title: "OMNI Laser治療　肌悩み全て解決（顔・身体）",
         note: "身体の料金は部位によって異なります。ご相談ください。",
@@ -555,7 +568,7 @@ const categories = [
             description: "あらゆる肌悩みに効果を出したい時に",
           },
           {
-            name: "エレクトロポレーション薬剤アップグレー���→エクソソーム",
+            name: "エレクトロポレーション薬剤アップグレード→エクソソーム",
             price: 11000,
             vipPrice: 11000,
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
@@ -578,7 +591,7 @@ const categories = [
             name: "エクソリューション・ダーマリバイブ（５回）",
             price: 247500,
             vipPrice: 198000,
-            description: "単回治療よ��55000円お得",
+            description: "単回治療より55000円お得",
           },
           { name: "マヌカミラクルリフレッシュ（初回限定）", price: 29700, vipPrice: 25850, description: "" },
           {
@@ -605,13 +618,13 @@ const categories = [
           { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダウンタイムを短く" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "美肌用のヒアルロン酸　乾燥・赤み・毛穴凹凸・艶感改善",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
           {
             name: "殺菌レーザー",
             price: 15400,
@@ -624,7 +637,7 @@ const categories = [
             type: "毛穴ニキビ跡おすすめ治療",
             items: [
               { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 39600 },
-              { name: "ボライト（頬のみ）", price: 110000 },
+              { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 },
             ],
           },
           {
@@ -701,21 +714,21 @@ const categories = [
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
           },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "肌に直接水分を入れ込み常に潤った状態に",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
-          { name: "ボライト（追加）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 64000, vipPrice: 43000, description: "肌状態をみながらご相談" },
         ],
         recommendations: [
           {
             type: "小ジワおすすめ治療",
             items: [
               { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 39600 },
-              { name: "ボライト（頬のみ）", price: 110000 },
+              { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 },
             ],
           },
           {
@@ -813,20 +826,20 @@ const categories = [
             price: 8800,
             vipPrice: 8800,
             description:
-              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③��術後のマッサージピーリング（複数選択可）",
+              "①ニキビや凹凸・赤みや美白に強いPDNR製剤②皮脂腺抑制効果のあるボトックス③施術後のマッサージピーリング（複数選択可）",
           },
           { name: "ダーマペンオプション２つ", price: 14300, vipPrice: 14300, description: "" },
           { name: "ダーマペンオプション３つ", price: 19800, vipPrice: 19800, description: "" },
-          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダ��ンタイムを短く" },
+          { name: "成長因子パック", price: 1650, vipPrice: 1650, description: "施術後のダウンタイムを短く" },
           { name: "スキンボトックス", price: 49500, vipPrice: 39600, description: "顔全体の毛穴/皮脂/たるみ改善" },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "美肌用のヒアルロン酸　乾燥・赤み・毛穴凹凸・艶感改善",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
           {
             name: "殺菌レーザー",
             price: 15400,
@@ -859,14 +872,14 @@ const categories = [
         title: "乾燥治療",
         treatments: [
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "美肌用のヒアルロン酸　乾燥・赤み・毛穴凹凸・艶感改善",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
-          { name: "ボライト(追加)", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 64000, vipPrice: 43000, description: "肌状態をみながらご相談" },
           {
             name: "エレクトロポレーション（１回）",
             price: 16500,
@@ -895,7 +908,7 @@ const categories = [
         recommendations: [
           {
             type: "乾燥治療おすすめ",
-            items: [{ name: "ボライト（頬のみ）", price: 110000 }],
+            items: [{ name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 }],
           },
           {
             type: "乾燥治療おすすめホームケア",
@@ -935,14 +948,14 @@ const categories = [
             description: "強い肌荒れや慢性炎症にも効果を出したい時に",
           },
           {
-            name: "ボライト（全顔）",
-            price: 165000,
-            vipPrice: 104500,
+            name: "スキンバイブ（全顔）（旧ボライト）",
+            price: 195000,
+            vipPrice: 130000,
             description: "赤み・毛穴・乾燥すべての改善を１つ＊１回の治療で",
           },
-          { name: "ボライト（頬のみ）", price: 110000, vipPrice: 71500, description: "" },
-          { name: "ボライト（頬内側・額）", price: 55000, vipPrice: 38500, description: "" },
-          { name: "ボライト（追加）", price: 55000, vipPrice: 38500, description: "肌状態をみながらご相談" },
+          { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000, vipPrice: 87000, description: "" },
+          { name: "スキンバイブ（頬内側・額）（旧ボライト）", price: 66000, vipPrice: 44000, description: "" },
+          { name: "スキンバイブ（追加）（旧ボライト）", price: 64000, vipPrice: 43000, description: "肌状態をみながらご相談" },
           { name: "赤み取りレーザー", price: 15400, vipPrice: 9900, description: "毛細血管の拡張を抑えます" },
         ],
         recommendations: [
@@ -950,7 +963,7 @@ const categories = [
             type: "赤みおすすめ治療",
             items: [
               { name: "赤み取りレーザー", price: 15400 },
-              { name: "ボライト（頬のみ）", price: 110000 },
+              { name: "スキンバイブ（頬のみ）（旧ボライト）", price: 131000 },
             ],
           },
           {
@@ -972,24 +985,34 @@ const categories = [
         title: "首のボリューム改善・たるみ治療",
         treatments: [
           {
-            name: "プロファイロ（初回限定）",
+            name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
             price: 77000,
             vipPrice: 55000,
-            description: "自己組織の活性化を利用して痩せた首のボリュームを戻します",
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
           },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
           { name: "ヒアルロン酸１本", price: 77000, vipPrice: 60500, description: "デザインしながら首を綺麗に" },
           { name: "HIFU（顔＋首）", price: 44000, vipPrice: 38500, description: "首から額までリフトアップ" },
           { name: "脂肪溶解注射(１cc)", price: 2750, vipPrice: 1750, description: "フェイスラインの脂肪を撃退" },
           { name: "糸モノリフト１０本〜", price: 39600, vipPrice: 33000, description: "" },
           { name: "首ボトックス＊", price: 39600, vipPrice: 34650, description: "首の縦シワ改善" },
-          { name: "ボライト", price: 77000, vipPrice: 60500, description: "首の横シワ改善" },
+          {
+            name: "スキンバイブ〜首横じわ改善〜",
+            price: 165000,
+            vipPrice: 144000,
+            description: "1ヶ月以内のリピートは10,000円引き",
+          },
         ],
         recommendations: [
           {
             type: "首おすすめ治療",
             items: [
-              { name: "プロファイロ（初回限定）", price: 39600 },
+              { name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)", price: 55000 },
               { name: "糸モノリフト１０本〜", price: 110000 },
             ],
           },
@@ -999,12 +1022,17 @@ const categories = [
         title: "デコルテ治療",
         treatments: [
           {
-            name: "プロファイロ（初回限定）",
+            name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
             price: 77000,
             vipPrice: 55000,
-            description: "自己組織の活性化を利用してデコルテのハリを改善",
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
           },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
           {
             name: "ヒアルロン酸１本",
             price: 77000,
@@ -1029,7 +1057,7 @@ const categories = [
           {
             type: "デコルテおすすめ治療",
             items: [
-              { name: "プロファイロ（初回限定）", price: 77000 },
+              { name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)", price: 55000 },
               { name: "マッサージピーリング（５回）", price: 46200 },
             ],
           },
@@ -1105,7 +1133,7 @@ const categories = [
             name: "高濃度ビタミンC（１０g）",
             price: 7700,
             vipPrice: 6600,
-            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効��覿面",
+            description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
           },
           {
             name: "高濃度ビタミンC（２０g）",
@@ -1113,7 +1141,7 @@ const categories = [
             vipPrice: 8800,
             description: "美肌・血管疾患・老化・がん等全身の健康に。免疫UP疲労回復にも効果覿面",
           },
-          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査���す" },
+          { name: "G6PD1検査", price: 4400, vipPrice: 4400, description: "20g治療前に必須な検査です" },
         ],
         recommendations: [],
       },
@@ -1126,12 +1154,17 @@ const categories = [
         title: "二の腕・毛孔性苔癬治療",
         treatments: [
           {
-            name: "プロファイロ（初回限定）",
+            name: "Hyal80(初回限定or同日２本目～or4ヶ月以内リピート)",
+            price: 55000,
+            vipPrice: 55000,
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円かつ初回のみ",
+          },
+          {
+            name: "Hyal80",
             price: 77000,
             vipPrice: 55000,
-            description: "二の腕のたるみとシワを改善",
+            description: "首・顔・手・デコルテ・二の腕など適用部位様々。プロファイロは＋22000円",
           },
-          { name: "プロファイロ", price: 99000, vipPrice: 77000, description: "" },
           {
             name: "脂肪溶解注射(１cc)",
             price: 2750,
@@ -1139,7 +1172,7 @@ const categories = [
             description: "二の腕を注射だけで細くしていきます",
           },
           {
-            name: "冷却HIFU��１回）",
+            name: "冷却HIFU（１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼなくたるみを改善します",
@@ -1262,7 +1295,7 @@ const categories = [
             description: "単回治療より8800円お得",
           },
           {
-            name: "黒ずみ改善レーザー",
+            name: "黒ずみ改善レーザ���",
             price: 27500,
             vipPrice: 22000,
             description: "体の黒ずみ改善に",
@@ -1346,7 +1379,7 @@ const categories = [
           { name: "ダーマペン（５回）", price: 198000, vipPrice: 159500, description: "単回治療より22000円お得に" },
           { name: "エクソリューション・ダーマリバイブ（初回限定）", price: 66000, vipPrice: 55000, description: "" },
           {
-            name: "エクソリューショ���・ダーマリバイブ（１回）",
+            name: "エクソリューション・ダーマリバイブ（１回）",
             price: 99000,
             vipPrice: 77000,
             description: "エクソソームとダーマペンで肌を生まれかわらせましょう",
@@ -1445,7 +1478,7 @@ const categories = [
             name: "マッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
-            description: "妊娠線などのシワを改善(１回：２０cm＊２０cmの治療範囲以内)",
+            description: "妊娠線などのシワを改善(１回：２���cm＊２０cmの治療範囲以内)",
           },
           {
             name: "マッサージピーリング（５回）",
@@ -1486,7 +1519,7 @@ const categories = [
           },
           { name: "脂肪溶解注射（1cc）", price: 2750, vipPrice: 1750, description: "脂肪をなくしてすっきりした足に" },
           {
-            name: "冷却HIFU（１回���",
+            name: "冷却HIFU（１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼない脂肪の燃焼治療",
@@ -1494,7 +1527,7 @@ const categories = [
           { name: "冷却HIFU（３回）", price: 132000, vipPrice: 89100, description: "" },
           { name: "冷却HIFU（１０回）", price: 385000, vipPrice: 275000, description: "" },
           {
-            name: "��ッサージピーリング（１回）",
+            name: "マッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
             description: "妊娠線などのシワを改善(１回：２０cm＊２０cmの治療範囲以内)",
@@ -1509,7 +1542,7 @@ const categories = [
         recommendations: [
           {
             type: "ふくらはぎおすすめ治療",
-            items: [{ name: "スーパーふくらはぎボトックス（１５０単位）", price: 110000 }],
+            items: [{ name: "スーパーふくらは���ボトックス（１５０単位）", price: 110000 }],
           },
         ],
       },
@@ -1522,7 +1555,7 @@ const categories = [
         title: "黒ずみ・色素沈着（身体）治療",
         treatments: [
           {
-            name: "���ヌカピーリング",
+            name: "マヌカピーリング",
             price: "部位により異なります",
             vipPrice: "部位により異なります",
             description: "マヌカハニーで保湿・抗菌・抗炎症しながらいらない角質除去/できものや荒れ・色素沈着に",

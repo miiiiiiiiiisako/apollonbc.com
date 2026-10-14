@@ -269,52 +269,22 @@ export default function Home() {
             <div className="space-y-6">
               <div className="border-l-4 border-[#b89e69] pl-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-500">2026.05〜2026.08</span>
-                  <span className="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">期間限定</span>
+                  <time dateTime="2026-10-14" className="text-sm text-gray-500">2026.10.14</time>
+                  <span className="flex flex-wrap justify-end gap-2">
+                    <span className="px-2 py-1 bg-amber-50 text-amber-800 text-xs rounded-full">Botox</span>
+                    <span className="px-2 py-1 bg-amber-50 text-amber-800 text-xs rounded-full">継続特典</span>
+                  </span>
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-3 text-lg">夏の大感謝キャンペーンと不在期間のお知らせ</h3>
-
-                <div className="space-y-4 text-sm text-gray-700">
-                  <div>
-                    <p className="font-semibold mb-2">■ 不在期間</p>
-                    <ul className="space-y-1 ml-2">
-                      <li>・6/23〜7/13：イタリア（ボローニャ学会）</li>
-                      <li>・7/25〜8/5：カナダ（ハープのワールドハープコングレス）</li>
-                    </ul>
-                  </div>
-
-                  <p className="text-gray-600 leading-relaxed">
-                    この間は診療日・予約枠が少なくなり、ご希望どおりのご予約が取りづらくなる可能性があります。<br />
-                    ご不便・ご迷惑をおかけしてしまい、本当に申し訳ございません。<br />
-                    その代わりと言ってはなんですが…<br />
-                    <span className="font-semibold text-[#b89e69]">【5〜8月限定の「夏の大感謝キャンペーン」】</span>をかなり盛りだくさんでご用意しました。
-                  </p>
-
-                  <div className="bg-amber-50 p-4 rounded-md">
-                    <p className="font-semibold text-gray-800 mb-3 border-b border-amber-200 pb-2">◆ 背中（5〜8月）</p>
-                    <ul className="space-y-2">
-                      <li>
-                        <p className="font-medium">・背中美人・殺菌レーザーコース</p>
-                        <p className="ml-3 text-gray-600">27,500円 → <span className="font-semibold text-[#b89e69]">19,800円</span>（5〜7月）</p>
-                        <p className="ml-3 text-gray-600">3回セット <span className="font-semibold text-[#b89e69]">55,000円</span>（8月末までに3回使用）</p>
-                      </li>
-                      <li>
-                        <p className="font-medium">・背中つるんとマヌカピーリング</p>
-                        <p className="ml-3 text-gray-600">5〜8月は、何回受けても毎回 <span className="font-semibold text-[#b89e69]">16,500円</span></p>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="mt-4">
-                    <p className="text-gray-600 mb-2">このほかにも、</p>
-                    <ul className="space-y-1 ml-2 text-gray-600">
-                      <li>・6〜7月：夏3ヶ月・肌育プラン／夏ボトックス</li>
-                      <li>・6〜8月：肌育プランの使用期間</li>
-                      <li>・8月：ヒアルロン酸キャンペーン</li>
-                    </ul>
-                    <p className="mt-2 text-gray-600">などを予定しています。<br />上記三つの詳細は順次公開いたします。</p>
-                  </div>
-                </div>
+                <h3 className="font-semibold text-gray-800 mb-3 text-lg">
+                  <a href="/news/botox-continuation" className="hover:text-[#a08a59]">ボトックス継続特典を開始しました</a>
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  前回施術から約3か月〜15週以内に、同じ部位のボトックス施術を継続される方は通常価格より
+                  <strong className="text-amber-800">1,000円OFF</strong>となります。
+                </p>
+                <a href="/news/botox-continuation" className="text-[#b89e69] hover:text-[#a08a59] text-sm underline underline-offset-4">
+                  詳細を見る →
+                </a>
               </div>
             </div>
 
