@@ -172,15 +172,6 @@ export default function Home() {
               オンライン診療×ABC Skin Labo
             </Link>
           </div>
-
-          <div className="mx-auto max-w-xl rounded-lg border border-[#d8c9ac] bg-white/70 p-4 text-center shadow-sm">
-            <p className="font-medium text-[#8a754c]">注入後の仕上がり・修正相談</p>
-            <p className="mt-1 text-sm text-gray-600">ボトックス・ヒアルロン酸・その他</p>
-            <p className="mt-2 text-sm leading-6 text-gray-600">他院で受けた注入治療後の仕上がりや左右差など、ご紹介のない方もご相談いただけます。</p>
-            <Link href="/correction" className="mt-3 inline-block rounded border border-[#b89e69] px-4 py-2 text-sm font-medium text-[#8a754c] transition-colors hover:bg-[#b89e69] hover:text-white">
-              相談内容・料金を見る
-            </Link>
-          </div>
         </div>
       </section>
 
