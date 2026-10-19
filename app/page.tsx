@@ -172,6 +172,12 @@ export default function Home() {
               オンライン診療×ABC Skin Labo
             </Link>
           </div>
+          <div className="mx-auto max-w-md border-t border-[#b89e69]/40 pt-5 text-center">
+            <p className="mb-1 text-sm font-medium text-[#8d7545]">顔貌・修正相談</p>
+            <p className="mb-2 text-xs text-[#6f6658]">注入後の仕上がり・顔面神経麻痺</p>
+            <p className="mb-4 text-xs leading-relaxed text-[#6f6658]">ボトックス・ヒアルロン酸などの治療後のお悩みや、顔面神経麻痺後の表情の左右差など、ご紹介のない方もご相談いただけます。</p>
+            <Link href="/correction" className="inline-block rounded border border-[#b89e69] bg-white/50 px-5 py-2 text-sm text-[#8d7545] transition hover:bg-white">相談内容・料金を見る</Link>
+          </div>
         </div>
       </section>
 

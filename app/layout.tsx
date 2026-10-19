@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Apollon Beauty Clinic",
-  description: "美と癒しの空間で、心身ともにリフレッシュ",
+  description: "美と癒しの空間で、心身ともにリフレッシュ。顔貌・修正相談と顔面神経麻痺後の表情・左右差のご相談も承ります。",
     generator: 'v0.app'
 }
 
