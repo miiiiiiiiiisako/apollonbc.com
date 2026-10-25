@@ -9,7 +9,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  if (request.nextUrl.pathname !== ACCESS_PATH) {
+  const isProtectedReferralRoute =
+    request.nextUrl.pathname === ACCESS_PATH || request.nextUrl.pathname.startsWith(`${ACCESS_PATH}/`)
+
+  if (!isProtectedReferralRoute) {
     return NextResponse.next()
   }
 
@@ -38,10 +41,10 @@ export function middleware(request: NextRequest) {
   const loginUrl = request.nextUrl.clone()
   loginUrl.pathname = LOGIN_PATH
   loginUrl.search = ""
-  loginUrl.searchParams.set("from", ACCESS_PATH)
+  loginUrl.searchParams.set("from", request.nextUrl.pathname)
   return NextResponse.redirect(loginUrl)
 }
 
 export const config = {
-  matcher: ["/beauty", "/beauty/"],
+  matcher: ["/beauty/:path*"],
 }
