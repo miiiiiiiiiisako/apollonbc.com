@@ -1,9 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const notoSans = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-sans" })
+const notoSerif = Noto_Serif_JP({ subsets: ["latin"], variable: "--font-noto-serif" })
 
 export const metadata: Metadata = {
   title: "Apollon Beauty Clinic",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={`${notoSans.variable} ${notoSerif.variable}`}>{children}</body>
     </html>
   )
 }
