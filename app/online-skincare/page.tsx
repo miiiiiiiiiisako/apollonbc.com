@@ -11,8 +11,8 @@ export default function OnlineSkincarePage() {
     <div className="bg-[#f8f4ec] min-h-screen">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         {/* ヘッダー */}
-        <header className="text-center mb-12">
-          <Link href="/" className="text-[#b89e69] hover:underline text-sm mb-4 inline-block">
+        <header id="skin" className="scroll-mt-8 text-center mb-12">
+          <Link href="/beauty-public" className="text-[#b89e69] hover:underline text-sm mb-4 inline-block">
             ← トップページに戻る
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-[#b89e69] mb-4">
@@ -465,7 +465,7 @@ export default function OnlineSkincarePage() {
                 <ol className="list-decimal pl-5 text-sm text-gray-700">
                   <li>利用者は、診察料を診察前に支払うものとします。</li>
                   <li>処方薬が処方された場合、利用者は処方薬代金および送料を発送前に支払うものとします。</li>
-                  <li>料金は診察内容により異なり、詳細は特定商取引法に基づく表記ページに記載します。</li>
+                  <li>料金は診察内容により異なり、詳細は特定商取引��に基づく表記ページに記載します。</li>
                   <li>支払方法は、クレジットカード決済または銀行振込とします。</li>
                 </ol>
 
@@ -533,7 +533,7 @@ export default function OnlineSkincarePage() {
             {modalContent === "privacy" && (
               <div className="prose prose-sm max-w-none">
                 <h2 className="text-xl font-bold text-[#b89e69] mb-4">プライバシーポリシー</h2>
-                <p className="text-sm text-gray-700">アポロンビューティークリニック（以下「当院」といいます）は、利用者の個人情報の重要性を認識し、個人情報の保護に関する法律（以下「個人情報保護法」といいます）を遵守し、以下のプライバシーポリシー（以下「本ポリシー」といいます）に基づき、適切に個人情報を取り扱います。</p>
+                <p className="text-sm text-gray-700">アポロンビューティークリニック（以下「当院」といいます）は、利用者の個人情報の重要性を��識し、個人情報の保護に関する法律（以下「個人情報保護法」といいます）を遵守し、以下のプライバシーポリシー（以下「本ポリシー」といいます）に基づき、適切に個人情報を取り扱います。</p>
 
                 <h3 className="font-semibold mt-4">第1条（個人情報）</h3>
                 <p className="text-sm text-gray-700">本ポリシーにおいて「個人情報」とは、個人情報保護法第2条第1項により定義された個人情報、すなわち、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、メールアドレスその他の記述等により特定の個人を識別できる情報を指します。</p>
