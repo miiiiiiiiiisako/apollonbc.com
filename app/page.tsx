@@ -1,64 +1,218 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 
 export default function Home() {
   const [isMuted, setIsMuted] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
+  const textSectionRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    audioRef.current = new Audio("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/y2mate_com_Sunset01HarpHealing_music_in_Okinawa_by_Misako_Matsui_V2-vVe9JFmeL4M3xOA0paQEEgjnxB9MUe.mp3")
+    audioRef.current = new Audio(
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/y2mate_com_Sunset01HarpHealing_music_in_Okinawa_by_Misako_Matsui_V2-vVe9JFmeL4M3xOA0paQEEgjnxB9MUe.mp3",
+    )
     audioRef.current.loop = true
+
+    // 音声が読み込まれたら最初の8秒をスキップする
     audioRef.current.addEventListener("loadedmetadata", () => {
-      if (audioRef.current) audioRef.current.currentTime = 8
+      if (audioRef.current) {
+        audioRef.current.currentTime = 8
+      }
     })
+
+    // スクロールアニメーション用のIntersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1 },
+    )
+
+    if (textSectionRef.current) {
+      observer.observe(textSectionRef.current)
+    }
+
     return () => {
-      audioRef.current?.pause()
-      audioRef.current = null
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current = null
+      }
+      if (textSectionRef.current) {
+        observer.unobserve(textSectionRef.current)
+      }
     }
   }, [])
 
   useEffect(() => {
-    if (!audioRef.current) return
-    if (isMuted) audioRef.current.pause()
-    else audioRef.current.play().catch(() => undefined)
+    if (audioRef.current) {
+      if (!isMuted) {
+        audioRef.current.play().catch((error) => console.log("Audio playback failed:", error))
+      } else {
+        audioRef.current.pause()
+      }
+    }
   }, [isMuted])
 
+  const passwordPrompt = () => {
+    const password = prompt("パスワードを入力してください:")
+    if (password === "ApBC") {
+      window.location.href = "/beauty"
+    } else {
+      alert("パスワードが間違っています。")
+    }
+  }
+
+  const toggleMute = () => {
+    if (audioRef.current) {
+      if (isMuted) {
+        audioRef.current.volume = 0.05
+        // 再生時にも8秒からスタートするようにする
+        audioRef.current.currentTime = 8
+        audioRef.current.play().catch((error) => console.log("Audio playback failed:", error))
+      } else {
+        audioRef.current.pause()
+      }
+    }
+    setIsMuted(!isMuted)
+  }
+
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#f8f4ec] text-[#4b4035]">
-      <video autoPlay muted loop aria-hidden="true" className="fixed inset-0 z-0 h-full w-full object-cover opacity-70">
-        <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Natural%20Spirituality%20Story%20Musical%20Video%20Compilation-ixB3oE1D2TBq5OuLWCvkYraOnv8DGl.mp4" type="video/mp4" />
+    <div className="relative overflow-x-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        className="fixed right-0 bottom-0 min-w-full min-h-full w-auto h-auto z-[-1] object-cover"
+      >
+        <source
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Natural%20Spirituality%20Story%20Musical%20Video%20Compilation-ixB3oE1D2TBq5OuLWCvkYraOnv8DGl.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 z-0 bg-[#f8f4ec]/65" />
-      <button onClick={() => setIsMuted((value) => !value)} aria-label={isMuted ? "音声を再生" : "音声を停止"} className="absolute right-5 top-5 z-20 rounded-full border border-[#b89e69]/50 bg-white/60 p-3 text-[#8d7545] backdrop-blur">
-        <span aria-hidden="true" className="text-sm">{isMuted ? "音声を再生" : "音声を停止"}</span>
-      </button>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-20">
-        <header className="mb-14 text-center">
-          <p className="mb-5 text-xs tracking-[0.32em] text-[#b89e69]">APOLLON.BEAUTY.CLINIC</p>
-          <h1 className="font-serif text-4xl leading-tight text-[#594b3c] md:text-6xl">美しさと、癒し。</h1>
-          <p className="mx-auto mt-6 max-w-md text-sm leading-7 text-[#6f6658]">一人ひとりの調和を見つめる場所。</p>
-        </header>
-
-        <section aria-label="サービスを選択" className="grid gap-5 md:grid-cols-2">
-          <Link href="/beauty-public" className="group border-t-2 border-[#b89e69] bg-[#fffaf2]/80 px-7 py-8 text-center shadow-sm transition hover:bg-[#fffaf2] md:px-10 md:py-12">
-            <p className="text-xs tracking-[0.24em] text-[#b89e69]">BEAUTY CLINIC</p>
-            <h2 className="mt-4 font-serif text-3xl text-[#594b3c] md:text-4xl">美容クリニック</h2>
-            <p className="mt-5 text-sm leading-7 text-[#6f6658]">紹介制の美容診療・専門相談・オンライン診療・コスメ</p>
-            <span className="mt-7 inline-flex text-sm font-medium text-[#8d7545] group-hover:underline">総合案内を見る →</span>
-          </Link>
-          <Link href="/music" className="group border-t-2 border-[#b89e69] bg-[#fffaf2]/80 px-7 py-8 text-center shadow-sm transition hover:bg-[#fffaf2] md:px-10 md:py-12">
-            <p className="text-xs tracking-[0.24em] text-[#b89e69]">MUSIC THERAPY</p>
-            <h2 className="mt-4 font-serif text-3xl text-[#594b3c] md:text-4xl">音楽療法</h2>
-            <p className="mt-5 text-sm leading-7 text-[#6f6658]">ハープの音色で心身を深く癒し、本来の調和を取り戻す音楽療法</p>
-            <span className="mt-7 inline-flex text-sm font-medium text-[#8d7545] group-hover:underline">準備中の案内を見る →</span>
-          </Link>
-        </section>
-
-        <p className="mt-12 text-center text-xs tracking-wide text-[#6f6658]">Apollon.Beauty.Clinic</p>
+      <div className="absolute top-5 right-5 z-10">
+        <button onClick={toggleMute} className="bg-white bg-opacity-50 p-2 rounded-full">
+          {isMuted ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                clipRule="evenodd"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+              />
+            </svg>
+          )}
+        </button>
       </div>
-    </main>
+
+      {/* 1ページ目 */}
+      <section className="h-screen flex flex-col justify-center items-center bg-[rgba(248,244,236,0.7)]">
+        <div className="text-center p-5">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#b89e69] mb-5">Apollon Beauty Clinic</h1>
+          <p
+            className="text-base md:text-lg mb-8 max-w-2xl mx-auto italic tracking-wide font-medium"
+            style={{ color: "#f8f5f0", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.3)" }}
+          >
+            Beauty and healing space. Refresh body and mind.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <button
+              onClick={passwordPrompt}
+              className="inline-block px-6 py-3 bg-[#b89e69] text-white rounded hover:bg-[#a08a59] transition-colors"
+            >
+              美容クリニック
+            </button>
+            <Link
+              href="/music"
+              className="inline-block px-6 py-3 bg-[#b89e69] text-white rounded hover:bg-[#a08a59] transition-colors"
+            >
+              音楽療法
+            </Link>
+            <Link
+              href="/online-skincare"
+              className="inline-block px-6 py-3 bg-teal-600 text-white rounded hover:bg-teal-700 transition-colors"
+            >
+              オンライン診療×ABC Skin Labo
+            </Link>
+          </div>
+          <div className="mx-auto max-w-md border-t border-[#b89e69]/40 pt-5 text-center">
+            <p className="mb-1 text-sm font-medium text-[#8d7545]">顔貌・修正相談</p>
+            <p className="mb-2 text-xs text-[#6f6658]">注入後の仕上がり・顔面神経麻痺</p>
+            <p className="mb-4 text-xs leading-relaxed text-[#6f6658]">ボトックス・ヒアルロン酸などの治療後のお悩みや、顔面神経麻痺後の表情の左右差など、ご紹介のない方もご相談いただけます。</p>
+            <Link href="/correction" className="inline-block rounded border border-[#b89e69] bg-white/50 px-5 py-2 text-sm text-[#8d7545] transition hover:bg-white">相談内容・料金を見る</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 2ページ目 */}
+      <section className="min-h-screen flex flex-col justify-center items-center bg-[rgba(248,244,236,0.7)]">
+        <div
+          ref={textSectionRef}
+          className={`max-w-3xl mx-auto p-5 transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+          style={{ paddingTop: "0", marginTop: "-2rem" }}
+        >
+          <p className="text-base md:text-lg mb-6 leading-relaxed font-light tracking-wider">
+            <span className="block text-[#b89e69] text-xl md:text-2xl font-medium mb-4 border-b border-[#b89e69] pb-2">
+              \ 完全紹介制の美容クリニック
+            </span>
+            あなただけの美しさを引き出す
+            <br />
+            <span className="italic">オーダーメイドの施術</span>をご提供。
+          </p>
+
+          <p className="text-base md:text-lg leading-relaxed font-light tracking-wider">
+            <span className="block text-[#b89e69] text-xl md:text-2xl font-medium mb-4 border-b border-[#b89e69] pb-2">
+              音楽療法
+            </span>
+            ハープの音色で心身を深く癒し、
+            <br />
+            <span className="italic">本来の調和を取り戻します</span>。
+          </p>
+        </div>
+      </section>
+
+      <footer className="relative w-full bg-[rgba(248,244,236,0.7)] py-2 text-center">
+        <p className="text-xs text-gray-600">BGM: "Sunset - Harp Healing music in Okinawa" by Misako Matsui</p>
+      </footer>
+    </div>
   )
 }
