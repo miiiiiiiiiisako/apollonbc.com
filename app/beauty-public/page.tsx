@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const lineUrl = "https://line.me/R/ti/p/@160orbcq"
 
-const buttonClass = "inline-flex items-center justify-center rounded border border-[#b89e69] px-5 py-3 text-sm text-[#8d7545] transition hover:bg-[#b89e69] hover:text-white"
+const buttonClass = "mt-auto inline-flex min-h-12 w-full items-center justify-center rounded border border-[#b89e69] px-5 py-3 text-sm text-[#8d7545] transition hover:bg-[#b89e69] hover:text-white"
 
 function ServiceCard({
   eyebrow,
@@ -26,12 +26,12 @@ function ServiceCard({
   disabled?: boolean
 }) {
   return (
-    <article className="border border-[#ded4c3] bg-white/45 p-6 md:p-7">
-      <p className="mb-3 text-xs tracking-[0.18em] text-[#8d7545]">{eyebrow}</p>
-      <h3 className="mb-3 text-xl font-medium text-[#4b4338]">{title}</h3>
+    <article className="flex h-full flex-col border border-[#ded4c3] bg-white/45 p-6 md:p-7">
+      <p className="mb-4 min-h-4 text-xs tracking-[0.18em] text-[#8d7545]">{eyebrow}</p>
+      <h3 className="mb-4 min-h-[3.5rem] font-serif text-xl font-medium leading-relaxed text-[#4b4338]">{title}</h3>
       <p className="mb-6 text-sm leading-relaxed text-[#665e50]">{description}</p>
       {disabled ? (
-        <span className="inline-flex items-center rounded border border-[#ded4c3] px-5 py-3 text-sm text-[#8f8678]">準備中</span>
+        <span className="mt-auto inline-flex min-h-12 w-full items-center justify-center rounded border border-[#ded4c3] px-5 py-3 text-sm text-[#8f8678]">準備中</span>
       ) : (
         <Link href={href ?? "#"} className={buttonClass}>{action}</Link>
       )}
@@ -65,7 +65,7 @@ export default function BeautyPublicPage() {
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">
           <p className="mb-3 text-sm tracking-[0.16em] text-[#8d7545]">CLINIC & SPECIALIST CONSULTATION</p>
-          <h2 className="mb-8 text-2xl font-semibold tracking-wide text-[#8d7545] md:text-3xl">来院での診療・専門相談</h2>
+          <h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">来院での診療・専門相談</h2>
           <div className="grid gap-5 md:grid-cols-3">
             <ServiceCard eyebrow="紹介制" title="紹介患者さま専用" description="ご紹介を受けた患者さま向けに、診療内容をご案内しています。" action="紹介患者さま専用ページへ" href="/beauty" />
             <ServiceCard eyebrow="紹介不要" title="注入後の仕上がり・修正相談" description="ヒアルロン酸やボトックスなどの施術後に生じた、仕上がりや表情の違和感についてご相談いただけます。" action="修正相談について" href="/correction" />
@@ -75,7 +75,7 @@ export default function BeautyPublicPage() {
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">
           <p className="mb-3 text-sm tracking-[0.16em] text-[#8d7545]">ONLINE SERVICES</p>
-          <h2 className="mb-8 text-2xl font-semibold tracking-wide text-[#8d7545] md:text-3xl">オンラインサービス</h2>
+          <h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">オンラインサービス</h2>
           <div className="grid gap-5 md:grid-cols-2">
             <ServiceCard eyebrow="準備中" title="オンライン診療" description="肌のお悩みやスキンケアの選び方、ダイエット、育毛について、ご自宅から医師にご相談いただけます。" action="オンライン診療のご案内" disabled />
             <ServiceCard eyebrow="ONLINE COSMETICS" title="オンラインコスメ" description="院長自身が試し、よいと感じたものだけを選んだ、医療機関専売コスメを中心とするオンラインショップです。" action="スキンケアの方針・ショップを見る" href="/online-skincare" />
@@ -83,7 +83,7 @@ export default function BeautyPublicPage() {
         </section>
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">
-          <h2 className="mb-8 text-2xl font-semibold tracking-wide text-[#8d7545] md:text-3xl">お顔の個性を、大切にするために。</h2>
+          <h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">お顔の個性を、大切にするために。</h2>
           <div className="max-w-3xl space-y-5 text-sm leading-loose text-[#665e50] md:text-base">
             <p>お一人おひとりのお顔には、その方ならではの個性と魅力があります。そのよさを大切にしながら、気になっている部分と顔全体のバランスを考えて治療をご提案します。</p>
             <p>治療を選ぶ際には、お顔の状態だけでなく、ライフスタイル、ご希望や避けたい施術、取れるダウンタイム、大切な予定までの期間も伺います。</p>
@@ -94,7 +94,7 @@ export default function BeautyPublicPage() {
         </section>
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">
-          <h2 className="mb-6 text-2xl font-semibold tracking-wide text-[#8d7545] md:text-3xl">症例紹介</h2>
+          <h2 className="mb-6 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">症例紹介</h2>
           <p className="text-sm leading-relaxed text-[#665e50]">症例は準備中です。</p>
         </section>
       </div>
