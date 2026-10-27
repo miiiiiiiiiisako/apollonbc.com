@@ -69,7 +69,7 @@ export default function BeautyPublicPage() {
           <div className="grid gap-5 md:grid-cols-3">
             <ServiceCard eyebrow="紹介制" title="紹介患者さま専用" description="ご紹介を受けた患者さま向けに、診療内容をご案内しています。" action="紹介患者さま専用ページへ" href="/beauty" />
             <ServiceCard eyebrow="紹介不要" title="注入後の仕上がり・修正相談" description="ヒアルロン酸やボトックスなどの施術後に生じた、仕上がりや表情の違和感についてご相談いただけます。" action="修正相談について" href="/correction" />
-            <ServiceCard eyebrow="紹介不要" title="顔面神経麻痺の治療相談" description="顔面神経麻痺後に残る、表情の左右差やこわばりなどについてご相談いただけます。" action="顔面神経麻痺の治療について" disabled />
+            <ServiceCard eyebrow="紹介不要" title="顔面神経麻痺の治療相談" description="顔面神経麻痺後に残る、表情の左右差やこわばりなどについてご相談いただけます。" action="顔面神経麻痺の治療について" href="/facial-palsy" />
           </div>
         </section>
 
