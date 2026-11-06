@@ -77,7 +77,7 @@ export default function BeautyPublicPage() {
           <p className="mb-3 text-sm tracking-[0.16em] text-[#8d7545]">ONLINE SERVICES</p>
           <h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">オンラインサービス</h2>
           <div className="grid gap-5 md:grid-cols-2">
-            <ServiceCard eyebrow="準備中" title="オンライン診療" description="肌のお悩みやスキンケアの選び方、ダイエット、育毛について、ご自宅から医師にご相談いただけます。" action="オンライン診療のご案内" disabled />
+            <ServiceCard eyebrow="ONLINE MEDICAL" title="オンライン診療" description="肌のお悩みやスキンケアの選び方、ダイエット、育毛について、ご自宅から医師にご相談いただけます。" action="診療内容・料金を見る" href="/online-medical" />
             <ServiceCard eyebrow="ONLINE COSMETICS" title="オンラインコスメ" description="院長自身が試し、よいと感じたものだけを選んだ、医療機関専売コスメを中心とするオンラインショップです。" action="スキンケアの方針・ショップを見る" href="/online-skincare" />
           </div>
         </section>

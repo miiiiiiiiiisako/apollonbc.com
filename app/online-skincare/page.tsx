@@ -35,7 +35,7 @@ export default function OnlineSkincarePage() {
             ABC Skin Labo
           </a>
           <a
-            href="https://web.booking.clius.jp/reserve/apollonbc-onlin_medical-counseling"
+            href="/online-medical"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors text-lg font-semibold shadow-lg hover:shadow-xl"
@@ -279,7 +279,7 @@ export default function OnlineSkincarePage() {
 
             <div className="text-center">
               <a
-                href="https://web.booking.clius.jp/reserve/apollonbc-onlin_medical-counseling"
+                href="/online-medical"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors font-semibold shadow-lg"
@@ -370,7 +370,7 @@ export default function OnlineSkincarePage() {
             ABC Skin Labo
           </a>
           <a
-            href="https://web.booking.clius.jp/reserve/apollonbc-onlin_medical-counseling"
+            href="/online-medical"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors text-lg font-semibold shadow-lg hover:shadow-xl"
