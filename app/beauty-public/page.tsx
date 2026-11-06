@@ -91,6 +91,7 @@ export default function BeautyPublicPage() {
             <p>対面診察では視診・触診を通じて、筋肉の動きや左右差、気になる症状の原因を確認し、治療の必要性と方法を判断します。</p>
           </div>
           <p className="mt-8 border-l border-[#b89e69] pl-4 font-serif text-lg text-[#8d7545] md:text-xl">診察・カウンセリングは、毎回すべて院長が担当</p>
+          <Link href="/about" className="mt-6 inline-block text-sm text-[#8d7545] underline underline-offset-4">院長の経歴・診療方針を見る</Link>
         </section>
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">
