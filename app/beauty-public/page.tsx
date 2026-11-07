@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Apollon.Beauty.Clinicの診療内容、専門相談、オンラインサービスをご案内します。",
 }
 
-const lineUrl = "https://line.me/R/ti/p/@160orbcq"
+const lineUrl = "https://lin.ee/oiYHa2N"
 
 const buttonClass = "mt-auto inline-flex min-h-12 w-full items-center justify-center rounded border border-[#b89e69] px-5 py-3 text-sm text-[#8d7545] transition hover:bg-[#b89e69] hover:text-white"
 
