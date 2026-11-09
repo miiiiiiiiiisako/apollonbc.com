@@ -4,6 +4,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "美容クリニック総合案内｜Apollon.Beauty.Clinic",
   description: "Apollon.Beauty.Clinicの診療内容、専門相談、オンラインサービスをご案内します。",
+  alternates: {
+    canonical: "https://apollonbc.com/beauty-public",
+    languages: {
+      ja: "https://apollonbc.com/beauty-public",
+      en: "https://apollonbc.com/en",
+    },
+  },
 }
 
 const lineUrl = "https://lin.ee/oiYHa2N"
@@ -45,7 +52,10 @@ export default function BeautyPublicPage() {
       <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <Link href="/" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link>
-          <a href={lineUrl} className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a>
+          <div className="flex items-center gap-4">
+            <Link href="/en" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link>
+            <a href={lineUrl} className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a>
+          </div>
         </div>
       </header>
 

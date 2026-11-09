@@ -4,6 +4,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: { absolute: "肌・ダイエット・育毛のオンライン診療｜Apollon.Beauty.Clinic" },
   description: "肌、体重管理、育毛のお悩みをご自宅から相談できるオンライン診療のご案内です。",
+  alternates: {
+    canonical: "https://apollonbc.com/online-medical",
+    languages: {
+      ja: "https://apollonbc.com/online-medical",
+      en: "https://apollonbc.com/en/online-consultation",
+    },
+  },
 }
 
 const bookingUrl = "https://web.booking.clius.jp/reserve/apollonbc-onlin_medical-counseling"
@@ -24,7 +31,7 @@ const medicines = [
 ]
 
 export default function OnlineMedicalPage() {
-  return <main className="min-h-screen bg-[#f8f4ec] text-[#3f3a32]"><header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><a href={lineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></header><div className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
+  return <main className="min-h-screen bg-[#f8f4ec] text-[#3f3a32]"><header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between gap-4"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><div className="flex items-center gap-4"><Link href="/en/online-consultation" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link><a href={lineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></div></header><div className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
     <section className="py-14 md:py-20"><Link href="/beauty-public" className="mb-8 inline-block text-sm text-[#8d7545] underline underline-offset-4">美容クリニック総合案内へ戻る</Link><p className="mb-5 text-xs tracking-[0.16em] text-[#8d7545]">ONLINE MEDICAL / 紹介不要</p><h1 className="mb-6 max-w-4xl font-serif text-[2.15rem] font-medium leading-[1.45] tracking-[0.06em] text-[#3f3a32] md:text-5xl">肌も、体重管理も、髪のお悩みも。<br className="sm:hidden" />暮らしに合う治療を、オンラインで。</h1><p className="mb-8 max-w-3xl text-base leading-loose text-[#665e50] md:text-lg">ご自宅からビデオ通話で診察し、お薬はご自宅へお届けします。1回の診察は約20分。お悩みの背景や生活習慣まで伺い、続けられる治療を一緒に考えます。</p><a href={bookingUrl} target="_blank" rel="noopener noreferrer" className={primaryButtonClass}>オンライン診察を予約する</a><p className="mt-3 text-xs leading-relaxed text-[#766d5e]">予約画面で「肌・ダイエット・育毛診察」（カテゴリ）を選択してください。</p></section>
     <section className="border-t border-[#ded4c3] py-12 md:py-16"><p className="mb-3 text-sm tracking-[0.16em] text-[#8d7545]">THREE AREAS OF CARE</p><h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">3つの診療</h2><div className="grid gap-5 md:grid-cols-3"><MedicalCard title="肌のお悩み" description="ニキビ、ニキビ跡、肝斑・くすみ、肌質のお悩みなど" href="#skin" /><MedicalCard title="ダイエット・体重管理" description="リバウンドしにくい体づくりを目指す体重管理" href="#diet" /><MedicalCard title="育毛" description="男性・女性の薄毛、抜け毛のお悩み" href="#hair" /></div></section>
     <Section id="skin" title="お薬と毎日のスキンケア、両方から整える。"><div className="space-y-4 text-sm leading-loose text-[#665e50] md:text-base"><p>内服薬・外用薬・漢方に加えて、毎日使う基礎化粧品の選び方や使い方も大切にしています。肌はスキンケアの見直しでも変わっていきます。今お使いの化粧品も伺いながら、お一人おひとりに合う組み合わせをご提案します。</p><p>必要に応じて、サプリメントの併用についてもご相談いただけます。</p><p className="text-xs text-[#766d5e]">※効果や経過には個人差があります。</p></div></Section>
@@ -39,7 +46,7 @@ export default function OnlineMedicalPage() {
       ["トレチノイン外用薬・アポロアクネミックス（院内製剤）", ["未承認医薬品です。国内で承認されたトレチノイン外用薬はありません。", "入手経路：国内メーカー（ナノエッグ）から原料を仕入れ、院内で調製しています。アポロアクネミックスは、トレチノイン・抗菌薬・炎症を抑える成分などを配合した院内製剤です。", "諸外国の状況：トレチノイン外用薬は、米国などでニキビの治療薬として承認されています。", "主なリスク：赤み、皮むけ、乾燥、ヒリヒリ感、日光への過敏。妊娠中・授乳中の方は使用できません。", "医薬品副作用被害救済制度の対象外です。"]],
       ["イソトレチノイン（内服）", ["未承認医薬品です。国内で、ニキビの治療薬として承認されたイソトレチノイン製剤はありません。", "入手経路：韓国の医薬品取扱業者を通じて、医師の責任のもと輸入しています。", "諸外国の状況：米国などで、重症のニキビの治療薬として承認されています。", "主なリスク：唇や皮膚の乾燥、肝機能や脂質の数値の変化、気分の変化など。胎児に重い影響が出るおそれがあるため、服用中と服用終了後1か月は必ず避妊してください。服用中は献血できません。", "当院では血液検査を行っていないため、内科などで肝機能などの血液検査を受けていただき、結果をオンライン診察でお知らせください。", "医薬品副作用被害救済制度の対象外です。"]],
       ["パントガール", ["未承認医薬品です。国内で承認された同じ成分の医薬品はありません。", "入手経路：国内の輸入代行業者（PRSS.Japan株式会社）を通じて、医師の責任のもと輸入しています。", "諸外国の状況：ドイツで、びまん性脱毛に対する医薬品として承認されています。", "主なリスク：胃の不快感、吐き気、まれに発疹など。", "医薬品副作用被害救済制度の対象外です。"]],
-      ["リベルサス・マンジャロ", ["国内では2型糖尿病の治療薬として承認されています。体重管理を目的とした使用は適応外使用です。", "入手経路：国内の正規流通品を使用しています。", "肥満症の治療薬としては、国内でウゴービ、ゼップバウンドが承認されています（保険適用には条件があります）。", "主なリスク：吐き気、便秘、下痢などの胃腸症状、低血糖、急性膵炎、胆のうの病気など。強い腹痛が続く場合は、すぐに医療機関を受診してください。", "適応外使用のため、医薬品副作用被害救済制度の対象外となる可能性が高いです。"]],
+      ["リ��ルサス・マンジャロ", ["国内では2型糖尿病の治療薬として承認されています。体重管理を目的とした使用は適応外使用です。", "入手経路：国内の正規流通品を使用しています。", "肥満症の治療薬としては、国内でウゴービ、ゼップバウンドが承認されています（保険適用には条件があります）。", "主なリスク：吐き気、便秘、下痢などの胃腸症状、低血糖、急性膵炎、胆のうの病気など。強い腹痛が続く場合は、すぐに医療機関を受診してください。", "適応外使用のため、医薬品副作用被害救済制度の対象外となる可能性が高いです。"]],
       ["SGLT2阻害薬", ["国内では糖尿病などの治療薬として承認されています。体重管理を目的とした使用は適応外使用です。", "入手経路：国内の正規流通品を使用しています。", "主なリスク：脱水、尿路や性器の感染症、ケトアシドーシスなど。", "適応外使用のため、医薬品副作用被害救済制度の対象外となる可能性があります。"]],
       ["トラネキサム酸・ユベラ・タチオン", ["いずれも国内承認医薬品ですが、肝斑・くすみなど美容目的での使用は適応外使用です。", "入手経路：国内の正規流通品を使用しています。", "主なリスク：トラネキサム酸は、まれに血栓症のリスクがあります。血栓症になったことがある方、ピルを服用中の方は必ずお申し出ください。ほかに胃腸症状、発疹などがあります。", "適応外使用のため、医薬品副作用被害救済制度の対象外となる可能性があります。"]],
       ["そのほかのお薬の主なリスク", ["デュタステリド：性欲の低下など。男性のみに処方します。妊娠中・妊娠の可能性がある女性は、カプセルに触れないでください。", "ミノマイシン：めまい、胃腸症状、色素沈着など。", "漢方：胃腸症状、まれに肝機能障害など。", "アップニーク®ミニ点眼液：目の充血、目の刺激感、かすみなど。コンタクトレンズは外してから点眼してください。", "サプリメント・化粧品は医薬品ではなく、病気の治療や効果を保証するものではありません。"]],
