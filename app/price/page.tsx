@@ -184,7 +184,7 @@ const categories = [
           { name: "スーパー小顔ボトックス（７５単位）", price: 52800, vipPrice: 41800, description: "" },
           { name: "エラボトックス（５０単位）", price: 39600, vipPrice: 34650, description: "修正１０単位まで" },
           { name: "小顔＋エラボトックス（１００単位）", price: 74800, vipPrice: 69300, description: "" },
-          { name: "スーパー小顔＋エラボトックス（１２５���位）", price: 85800, vipPrice: 76450, description: "" },
+          { name: "スーパー小顔＋エラボトックス（１２５単位）", price: 85800, vipPrice: 76450, description: "" },
           { name: "口角ボトックス", price: 15400, vipPrice: 11000, description: "下がった口角を上向きに" },
           { name: "ガミースマイルボトックス", price: 15400, vipPrice: 11000, description: "歯茎の見えない笑顔に" },
           {
@@ -1037,14 +1037,14 @@ const categories = [
             name: "ヒアルロン酸１本",
             price: 77000,
             vipPrice: 60500,
-            description: "デザインしながらデコルテを綺麗��",
+            description: "デザインしながらデコルテを綺麗に",
           },
           { name: "HIFU", price: 44000, vipPrice: 38500, description: "デコルテのたるみを改善" },
           {
             name: "マッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
-            description: "デコルテのハリ・つや��改善",
+            description: "デコルテのハリ・つやを改善",
           },
           {
             name: "マッサージピーリング（５回）",
@@ -1172,7 +1172,7 @@ const categories = [
             description: "二の腕を注射だけで細くしていきます",
           },
           {
-            name: "冷却HIFU（１��）",
+            name: "冷却HIFU（１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼなくたるみを改善します",
@@ -1267,7 +1267,7 @@ const categories = [
             description: "ダウンタイムや痛みをほぼない脂肪の燃焼治療",
           },
           { name: "冷却HIFU（３回）", price: 132000, vipPrice: 89100, description: "" },
-          { name: "冷却HIFU（１０回��", price: 385000, vipPrice: 275000, description: "" },
+          { name: "冷却HIFU（１０回）", price: 385000, vipPrice: 275000, description: "" },
           {
             name: "マヌカピーリング（初回限定）",
             price: 16500,
@@ -1295,7 +1295,7 @@ const categories = [
             description: "単回治療より8800円お得",
           },
           {
-            name: "黒ずみ改善レーザ���",
+            name: "黒ずみ改善レーザー",
             price: 27500,
             vipPrice: 22000,
             description: "体の黒ずみ改善に",
@@ -1453,7 +1453,7 @@ const categories = [
         treatments: [
           { name: "脂肪溶解注射（1cc）", price: 2750, vipPrice: 1750, description: "脂肪をなくしてすっきりした足に" },
           {
-            name: "冷却HIFU（１���）",
+            name: "冷却HIFU（１回）",
             price: 55000,
             vipPrice: 33000,
             description: "ダウンタイムや痛みをほぼなくたるみを改善します",
@@ -1478,7 +1478,7 @@ const categories = [
             name: "マッサージピーリング（１回）",
             price: 11000,
             vipPrice: 9900,
-            description: "妊娠線などのシワを改善(１回：２���cm＊２０cmの治療範囲以内)",
+            description: "妊娠線などのシワを改善(１回：２０cm＊２０cmの治療範囲以内)",
           },
           {
             name: "マッサージピーリング（５回）",
@@ -1542,7 +1542,7 @@ const categories = [
         recommendations: [
           {
             type: "ふくらはぎおすすめ治療",
-            items: [{ name: "スーパーふくらは���ボトックス（１５０単位）", price: 110000 }],
+            items: [{ name: "スーパーふくらはぎボトックス（１５０単位）", price: 110000 }],
           },
         ],
       },
