@@ -35,7 +35,7 @@ export default function Home() {
         <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Natural%20Spirituality%20Story%20Musical%20Video%20Compilation-ixB3oE1D2TBq5OuLWCvkYraOnv8DGl.mp4" type="video/mp4" />
       </video>
       <div className="fixed inset-0 z-0 bg-[rgba(248,244,236,0.68)]" />
-      <button onClick={toggleMute} aria-label={isMuted ? "音声を再生" : "音声を停止"} className="absolute right-5 top-5 z-10 rounded-full bg-white/60 p-2 text-[#8d7545]">
+      <button onClick={toggleMute} aria-label={isMuted ? "音声を再生" : "音声を停止"} className="absolute right-5 top-5 z-20 rounded-full bg-white/60 p-2 text-[#8d7545]">
         {isMuted ? "♪" : "Ⅱ"}
       </button>
       <section className="relative z-10 flex min-h-screen flex-col items-center justify-center px-5 py-16 text-center">
@@ -59,6 +59,9 @@ export default function Home() {
         </div>
         <Link href="/about" className="mt-8 text-xs text-[#8d7545] underline decoration-[#b89e69] underline-offset-4 transition hover:text-[#4b4338]">院長・クリニック紹介 →</Link>
       </section>
+      <p className="pointer-events-none absolute bottom-3 left-1/2 z-20 w-full -translate-x-1/2 px-5 text-center text-[10px] text-[#8d7545]">
+        {'BGM: "Sunset - Harp Healing music in Okinawa" by Misako Matsui'}
+      </p>
     </main>
   )
 }
