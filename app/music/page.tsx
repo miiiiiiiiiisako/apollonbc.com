@@ -5,6 +5,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "音楽療法・ハープセラピー｜Apollon.Beauty.Clinic",
   description: "医師・ハープセラピストの松井美彩子による、ハープの生演奏を用いた1対1の音楽療法。対面・オンラインのセッションと、病院・施設への訪問演奏、講演のご依頼を承っています。",
+  alternates: {
+    canonical: "https://www.apollonbc.com/music",
+    languages: {
+      ja: "https://www.apollonbc.com/music",
+      en: "https://www.apollonbc.com/en/music",
+    },
+  },
 }
 
 const musicLineUrl = "https://line.me/R/ti/p/@160orbcq"
@@ -27,7 +34,7 @@ const prices = [
 
 export default function MusicTherapyPage() {
   return <main className="min-h-screen bg-[#f8f4ec] text-[#3f3a32]">
-    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><a href={musicLineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></header>
+    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><div className="flex items-center gap-4"><Link href="/en/music" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link><a href={musicLineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></div></header>
     <div className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
       <section className="py-10 md:py-16"><div className="relative mb-10 aspect-[16/10] overflow-hidden md:aspect-[16/8]"><Image src="/images/harp-seaside.jpg" alt="海辺でハープを演奏する松井美彩子" fill priority sizes="(min-width: 1024px) 960px, 100vw" className="object-cover object-left" /></div><p className="mb-5 text-sm tracking-[0.2em] text-[#8d7545]">MUSIC THERAPY</p><h1 className="mb-7 max-w-4xl font-serif text-[2.15rem] font-medium leading-[1.45] tracking-[0.06em] md:text-5xl">ハープの音色とともに、心と体を休める時間を。</h1><p className="mb-8 max-w-3xl text-base leading-loose text-[#665e50] md:text-lg">医師であり、ハープセラピストでもある院長・松井美彩子が、ハープの生演奏による1対1の音楽療法を行います。ご紹介のない方も、お申し込みいただけます。</p><a href={musicLineUrl} target="_blank" rel="noopener noreferrer" className={primaryButtonClass}>LINEで予約・相談する</a></section>
 
