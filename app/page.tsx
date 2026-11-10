@@ -3,30 +3,78 @@
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 
+const USER_STOPPED_MUSIC_KEY = "homepage-music-user-stopped"
+
 export default function Home() {
-  const [isMuted, setIsMuted] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
     const audio = new Audio("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/y2mate_com_Sunset01HarpHealing_music_in_Okinawa_by_Misako_Matsui_V2-vVe9JFmeL4M3xOA0paQEEgjnxB9MUe.mp3")
-    audio.loop = true
-    audio.volume = 0.05
-    audio.addEventListener("loadedmetadata", () => { audio.currentTime = 8 })
-    audioRef.current = audio
-    return () => { audio.pause(); audioRef.current = null }
-  }, [])
+    let waitingForInteraction = false
 
-  const toggleMute = () => {
-    const audio = audioRef.current
-    if (audio) {
-      if (isMuted) {
+    const startAtEightSeconds = () => {
+      if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) {
         audio.currentTime = 8
-        audio.play().catch(() => undefined)
       } else {
-        audio.pause()
+        audio.addEventListener("loadedmetadata", () => { audio.currentTime = 8 }, { once: true })
       }
     }
-    setIsMuted((value) => !value)
+    const removeInteractionListeners = () => {
+      document.removeEventListener("pointerdown", retryPlayback)
+      document.removeEventListener("keydown", retryPlayback)
+      waitingForInteraction = false
+    }
+    const playAudio = async () => {
+      startAtEightSeconds()
+      try {
+        await audio.play()
+        removeInteractionListeners()
+      } catch {
+        if (!waitingForInteraction) {
+          waitingForInteraction = true
+          document.addEventListener("pointerdown", retryPlayback, { once: true })
+          document.addEventListener("keydown", retryPlayback, { once: true })
+        }
+      }
+    }
+    function retryPlayback() {
+      void playAudio()
+    }
+
+    audio.loop = true
+    audio.volume = 0.05
+    audio.addEventListener("play", () => { setIsPlaying(true) })
+    audio.addEventListener("pause", () => { setIsPlaying(false) })
+    audioRef.current = audio
+
+    if (sessionStorage.getItem(USER_STOPPED_MUSIC_KEY) !== "true") {
+      void playAudio()
+    }
+
+    return () => {
+      removeInteractionListeners()
+      audio.pause()
+      audioRef.current = null
+    }
+  }, [])
+
+  const togglePlayback = async () => {
+    const audio = audioRef.current
+    if (!audio) return
+
+    if (audio.paused) {
+      sessionStorage.removeItem(USER_STOPPED_MUSIC_KEY)
+      if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) audio.currentTime = 8
+      try {
+        await audio.play()
+      } catch {
+        setIsPlaying(false)
+      }
+    } else {
+      sessionStorage.setItem(USER_STOPPED_MUSIC_KEY, "true")
+      audio.pause()
+    }
   }
 
   return (
@@ -35,8 +83,8 @@ export default function Home() {
         <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Natural%20Spirituality%20Story%20Musical%20Video%20Compilation-ixB3oE1D2TBq5OuLWCvkYraOnv8DGl.mp4" type="video/mp4" />
       </video>
       <div className="fixed inset-0 z-0 bg-[rgba(248,244,236,0.68)]" />
-      <button onClick={toggleMute} aria-label={isMuted ? "音声を再生" : "音声を停止"} className="absolute right-5 top-5 z-20 rounded-full bg-white/60 p-2 text-[#8d7545]">
-        {isMuted ? "♪" : "Ⅱ"}
+      <button onClick={togglePlayback} aria-label={isPlaying ? "音声を停止" : "音声を再生"} className="absolute right-5 top-5 z-20 rounded-full bg-white/60 p-2 text-[#8d7545]">
+        {isPlaying ? "Ⅱ" : "♪"}
       </button>
       <section className="relative z-10 flex min-h-screen flex-col items-center justify-center px-5 py-16 text-center">
         <p className="mb-5 text-xs tracking-[0.28em] text-[#8d7545]">Apollon.Beauty.Clinic</p>
