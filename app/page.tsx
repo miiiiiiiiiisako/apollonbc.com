@@ -38,7 +38,11 @@ export default function Home() {
         }
       }
     }
-    function retryPlayback() {
+    function retryPlayback(event: Event) {
+      const target = event.target
+      if (target instanceof Element && target.closest("button[aria-label='音声を再生'], button[aria-label='音声を停止']")) return
+
+      waitingForInteraction = false
       void playAudio()
     }
 
