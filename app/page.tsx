@@ -39,6 +39,8 @@ export default function Home() {
       }
     }
     function retryPlayback(event: Event) {
+      if (sessionStorage.getItem(USER_STOPPED_MUSIC_KEY) === "true") return
+
       const target = event.target
       if (target instanceof Element && target.closest("button[aria-label='音声を再生'], button[aria-label='音声を停止']")) return
 
@@ -48,7 +50,10 @@ export default function Home() {
 
     audio.loop = true
     audio.volume = 0.05
-    audio.addEventListener("play", () => { setIsPlaying(true) })
+    audio.addEventListener("play", () => {
+      removeInteractionListeners()
+      setIsPlaying(true)
+    })
     audio.addEventListener("pause", () => { setIsPlaying(false) })
     audioRef.current = audio
 
