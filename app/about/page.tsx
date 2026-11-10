@@ -5,6 +5,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "院長・クリニック紹介｜Apollon.Beauty.Clinic",
   description: "Apollon.Beauty.Clinic 院長・松井美彩子の経歴と診療方針、クリニックの概要をご紹介します。",
+  alternates: {
+    canonical: "https://www.apollonbc.com/about",
+    languages: {
+      ja: "https://www.apollonbc.com/about",
+      en: "https://www.apollonbc.com/en/about",
+    },
+  },
 }
 
 const beautyLineUrl = "https://lin.ee/oiYHa2N"
@@ -28,7 +35,7 @@ const profileRows = [
 
 export default function AboutPage() {
   return <main className="min-h-screen bg-[#f8f4ec] text-[#3f3a32]">
-    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><a href={beautyLineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></header>
+    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><div className="flex items-center gap-4"><Link href="/en/about" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link><a href={beautyLineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></div></header>
     <div className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
       <section className="py-16 md:py-24"><p className="mb-5 text-sm tracking-[0.2em] text-[#8d7545]">ABOUT</p><h1 className="mb-7 font-serif text-[2.15rem] font-medium leading-[1.45] tracking-[0.08em] md:text-5xl">院長・クリニック紹介</h1><p className="max-w-3xl text-base leading-loose text-[#665e50] md:text-lg">どのような医師が、どのような考えで診療しているのか。美容医療と音楽療法、それぞれの取り組みと、クリニックの概要をご紹介します。</p></section>
 
