@@ -93,6 +93,9 @@ export default function EnglishHomePage() {
           <Link href="/en/about" className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded border border-[#b89e69] px-5 py-3 text-center text-sm text-[#8d7545] transition hover:bg-[#b89e69] hover:text-white">
             About the doctor and the clinic
           </Link>
+          <Link href="/en/music" className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded border border-[#b89e69] px-5 py-3 text-center text-sm text-[#8d7545] transition hover:bg-[#b89e69] hover:text-white">
+            Music therapy with live harp
+          </Link>
         </section>
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">

@@ -317,7 +317,7 @@ export default function EnglishOnlineConsultationPage() {
           </div>
         </section>
         <div className="pt-2 text-center">
-          <Link href="/music" className="text-xs text-[#8d7545] underline underline-offset-4">Music therapy consultations</Link>
+          <Link href="/en/music" className="text-xs text-[#8d7545] underline underline-offset-4">Music therapy consultations</Link>
         </div>
       </div>
     </main>
