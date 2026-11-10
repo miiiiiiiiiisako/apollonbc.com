@@ -3,7 +3,14 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "美容クリニック総合案内｜Apollon.Beauty.Clinic",
-  description: "Apollon.Beauty.Clinicの診療内容、専門相談、オンラインサービスをご案内します。",
+  description: "Apollon.Beauty.Clinicの診療内容、修正相談、オンラインサービスをご案内します。",
+  alternates: {
+    canonical: "https://www.apollonbc.com/beauty-public",
+    languages: {
+      ja: "https://www.apollonbc.com/beauty-public",
+      en: "https://www.apollonbc.com/en",
+    },
+  },
 }
 
 const lineUrl = "https://lin.ee/oiYHa2N"
@@ -45,7 +52,10 @@ export default function BeautyPublicPage() {
       <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <Link href="/" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link>
-          <a href={lineUrl} className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a>
+          <div className="flex items-center gap-4">
+            <Link href="/en" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link>
+            <a href={lineUrl} className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a>
+          </div>
         </div>
       </header>
 
@@ -65,7 +75,7 @@ export default function BeautyPublicPage() {
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">
           <p className="mb-3 text-sm tracking-[0.16em] text-[#8d7545]">CLINIC & SPECIALIST CONSULTATION</p>
-          <h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">来院での診療・専門相談</h2>
+          <h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">来院での診療・修正相談</h2>
           <div className="grid gap-5 md:grid-cols-3">
             <ServiceCard eyebrow="紹介制" title="紹介患者さま専用" description="ご紹介を受けた患者さま向けに、診療内容をご案内しています。" action="紹介患者さま専用ページへ" href="/beauty" />
             <ServiceCard eyebrow="紹介不要" title="注入後の仕上がり・修正相談" description="ヒアルロン酸やボトックスなどの施術後に生じた、仕上がりや表情の違和感についてご相談いただけます。" action="修正相談について" href="/correction" />

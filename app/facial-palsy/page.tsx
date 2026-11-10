@@ -4,6 +4,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "顔面神経麻痺の治療相談｜Apollon.Beauty.Clinic",
   description: "顔面神経麻痺後に残る表情の左右差やこわばりについての治療相談をご案内します。",
+  alternates: {
+    canonical: "https://www.apollonbc.com/facial-palsy",
+    languages: {
+      ja: "https://www.apollonbc.com/facial-palsy",
+      en: "https://www.apollonbc.com/en/facial-palsy",
+    },
+  },
 }
 
 const bookingUrl = "https://web.booking.clius.jp/reserve/apollonbc-onlin_medical-counseling"
@@ -36,7 +43,7 @@ function ActionButtons() {
 
 export default function FacialPalsyPage() {
   return <main className="min-h-screen bg-[#f8f4ec] text-[#3f3a32]">
-    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><a href={lineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></header>
+    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><div className="flex items-center gap-4"><Link href="/en/facial-palsy" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link><a href={lineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></div></header>
     <div className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
       <section className="py-14 md:py-20"><Link href="/beauty-public" className="mb-8 inline-block text-sm text-[#8d7545] underline underline-offset-4">美容クリニック総合案内へ戻る</Link><div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs tracking-[0.16em] text-[#8d7545]"><span>FACIAL PALSY CONSULTATION</span><span className="border-l border-[#b89e69] pl-4 tracking-normal">紹介不要</span></div><h1 className="mb-6 max-w-3xl font-serif text-[2.15rem] font-medium leading-[1.45] tracking-[0.08em] text-[#3f3a32] md:text-5xl">顔面神経麻痺のあとに残る、<br className="sm:hidden" />表情の左右差やこわばりに。</h1><p className="mb-7 max-w-3xl text-base leading-loose text-[#665e50] md:text-lg">麻痺の治療を終えたあとも続く、表情の左右差やこわばり、笑ったときの違和感。医師がお顔の動きとこれまでの経過を丁寧に確認し、ボトックス治療が適しているかを一緒に考えます。</p><p className="mb-8 border-l border-[#b89e69] pl-4 text-sm leading-relaxed text-[#665e50]">ご紹介のない方もご相談いただけます。診察・カウンセリングは、毎回すべて院長が担当します。</p><ActionButtons /></section>
       <Section title="このようなお悩みはありませんか"><ul className="grid gap-3 md:grid-cols-2">{concerns.map(item => <li key={item} className="border border-[#ded4c3] bg-white/45 p-4 text-sm leading-relaxed text-[#665e50]">{item}</li>)}</ul></Section>

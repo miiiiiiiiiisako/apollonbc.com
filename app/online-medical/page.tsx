@@ -4,6 +4,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: { absolute: "肌・ダイエット・育毛のオンライン診療｜Apollon.Beauty.Clinic" },
   description: "肌、体重管理、育毛のお悩みをご自宅から相談できるオンライン診療のご案内です。",
+  alternates: {
+    canonical: "https://www.apollonbc.com/online-medical",
+    languages: {
+      ja: "https://www.apollonbc.com/online-medical",
+      en: "https://www.apollonbc.com/en/online-consultation",
+    },
+  },
 }
 
 const bookingUrl = "https://web.booking.clius.jp/reserve/apollonbc-onlin_medical-counseling"
@@ -24,7 +31,7 @@ const medicines = [
 ]
 
 export default function OnlineMedicalPage() {
-  return <main className="min-h-screen bg-[#f8f4ec] text-[#3f3a32]"><header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><a href={lineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></header><div className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
+  return <main className="min-h-screen bg-[#f8f4ec] text-[#3f3a32]"><header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between gap-4"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><div className="flex items-center gap-4"><Link href="/en/online-consultation" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link><a href={lineUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></div></header><div className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
     <section className="py-14 md:py-20"><Link href="/beauty-public" className="mb-8 inline-block text-sm text-[#8d7545] underline underline-offset-4">美容クリニック総合案内へ戻る</Link><p className="mb-5 text-xs tracking-[0.16em] text-[#8d7545]">ONLINE MEDICAL / 紹介不要</p><h1 className="mb-6 max-w-4xl font-serif text-[2.15rem] font-medium leading-[1.45] tracking-[0.06em] text-[#3f3a32] md:text-5xl">肌も、体重管理も、髪のお悩みも。<br className="sm:hidden" />暮らしに合う治療を、オンラインで。</h1><p className="mb-8 max-w-3xl text-base leading-loose text-[#665e50] md:text-lg">ご自宅からビデオ通話で診察し、お薬はご自宅へお届けします。1回の診察は約20分。お悩みの背景や生活習慣まで伺い、続けられる治療を一緒に考えます。</p><a href={bookingUrl} target="_blank" rel="noopener noreferrer" className={primaryButtonClass}>オンライン診察を予約する</a><p className="mt-3 text-xs leading-relaxed text-[#766d5e]">予約画面で「肌・ダイエット・育毛診察」（カテゴリ）を選択してください。</p></section>
     <section className="border-t border-[#ded4c3] py-12 md:py-16"><p className="mb-3 text-sm tracking-[0.16em] text-[#8d7545]">THREE AREAS OF CARE</p><h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">3つの診療</h2><div className="grid gap-5 md:grid-cols-3"><MedicalCard title="肌のお悩み" description="ニキビ、ニキビ跡、肝斑・くすみ、肌質のお悩みなど" href="#skin" /><MedicalCard title="ダイエット・体重管理" description="リバウンドしにくい体づくりを目指す体重管理" href="#diet" /><MedicalCard title="育毛" description="男性・女性の薄毛、抜け毛のお悩み" href="#hair" /></div></section>
     <Section id="skin" title="お薬と毎日のスキンケア、両方から整える。"><div className="space-y-4 text-sm leading-loose text-[#665e50] md:text-base"><p>内服薬・外用薬・漢方に加えて、毎日使う基礎化粧品の選び方や使い方も大切にしています。肌はスキンケアの見直しでも変わっていきます。今お使いの化粧品も伺いながら、お一人おひとりに合う組み合わせをご提案します。</p><p>必要に応じて、サプリメントの併用についてもご相談いただけます。</p><p className="text-xs text-[#766d5e]">※効果や経過には個人差があります。</p></div></Section>
