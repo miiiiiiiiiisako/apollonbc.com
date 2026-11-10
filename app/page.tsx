@@ -12,12 +12,17 @@ export default function Home() {
   useEffect(() => {
     const audio = new Audio("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/y2mate_com_Sunset01HarpHealing_music_in_Okinawa_by_Misako_Matsui_V2-vVe9JFmeL4M3xOA0paQEEgjnxB9MUe.mp3")
     let waitingForInteraction = false
+    let disposed = false
 
+    const handleLoadedMetadata = () => {
+      if (!disposed) audio.currentTime = 8
+    }
     const startAtEightSeconds = () => {
+      if (disposed) return
       if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) {
         audio.currentTime = 8
       } else {
-        audio.addEventListener("loadedmetadata", () => { audio.currentTime = 8 }, { once: true })
+        audio.addEventListener("loadedmetadata", handleLoadedMetadata, { once: true })
       }
     }
     const removeInteractionListeners = () => {
@@ -26,11 +31,17 @@ export default function Home() {
       waitingForInteraction = false
     }
     const playAudio = async () => {
+      if (disposed) return
       startAtEightSeconds()
       try {
         await audio.play()
+        if (disposed) {
+          audio.pause()
+          return
+        }
         removeInteractionListeners()
       } catch {
+        if (disposed) return
         if (!waitingForInteraction) {
           waitingForInteraction = true
           document.addEventListener("pointerdown", retryPlayback, { once: true })
@@ -39,7 +50,7 @@ export default function Home() {
       }
     }
     function retryPlayback(event: Event) {
-      if (sessionStorage.getItem(USER_STOPPED_MUSIC_KEY) === "true") return
+      if (disposed || sessionStorage.getItem(USER_STOPPED_MUSIC_KEY) === "true") return
 
       const target = event.target
       if (target instanceof Element && target.closest("button[aria-label='音声を再生'], button[aria-label='音声を停止']")) return
@@ -51,10 +62,16 @@ export default function Home() {
     audio.loop = true
     audio.volume = 0.05
     audio.addEventListener("play", () => {
+      if (disposed) {
+        audio.pause()
+        return
+      }
       removeInteractionListeners()
       setIsPlaying(true)
     })
-    audio.addEventListener("pause", () => { setIsPlaying(false) })
+    audio.addEventListener("pause", () => {
+      if (!disposed) setIsPlaying(false)
+    })
     audioRef.current = audio
 
     if (sessionStorage.getItem(USER_STOPPED_MUSIC_KEY) !== "true") {
@@ -62,9 +79,13 @@ export default function Home() {
     }
 
     return () => {
+      disposed = true
       removeInteractionListeners()
+      audio.removeEventListener("loadedmetadata", handleLoadedMetadata)
       audio.pause()
-      audioRef.current = null
+      audio.removeAttribute("src")
+      audio.load()
+      if (audioRef.current === audio) audioRef.current = null
     }
   }, [])
 
@@ -77,8 +98,13 @@ export default function Home() {
       if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) audio.currentTime = 8
       try {
         await audio.play()
+        if (audioRef.current !== audio) {
+          audio.pause()
+          audio.removeAttribute("src")
+          audio.load()
+        }
       } catch {
-        setIsPlaying(false)
+        if (audioRef.current === audio) setIsPlaying(false)
       }
     } else {
       sessionStorage.setItem(USER_STOPPED_MUSIC_KEY, "true")
