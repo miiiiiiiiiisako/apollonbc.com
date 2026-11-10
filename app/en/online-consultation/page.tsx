@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   description:
     "English online medical consultations in Japan for skin concerns, weight management, and hair thinning, with prescriptions shipped within Japan.",
   alternates: {
-    canonical: "https://apollonbc.com/en/online-consultation",
+    canonical: "https://www.apollonbc.com/en/online-consultation",
     languages: {
-      en: "https://apollonbc.com/en/online-consultation",
-      ja: "https://apollonbc.com/online-medical",
+      en: "https://www.apollonbc.com/en/online-consultation",
+      ja: "https://www.apollonbc.com/online-medical",
     },
   },
 }

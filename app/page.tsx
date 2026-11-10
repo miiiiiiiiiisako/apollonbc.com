@@ -103,7 +103,7 @@ export default function Home() {
           <Link href="/beauty-public" className="group border border-[#b89e69] bg-[#f8f4ec]/85 px-7 py-9 text-left transition hover:bg-white/90">
             <p className="mb-3 text-xs tracking-[0.2em] text-[#8d7545]">BEAUTY CLINIC</p>
             <h2 className="mb-3 font-serif text-2xl text-[#4b4338]">美容クリニック</h2>
-            <p className="mb-6 text-sm leading-relaxed text-[#665e50]">紹介制の美容診療・専門相談・オンライン診療・コスメ</p>
+            <p className="mb-6 text-sm leading-relaxed text-[#665e50]">紹介制の美容診療・修正相談・オンライン診療・コスメ</p>
             <span className="text-sm text-[#8d7545] underline underline-offset-4">総合案内を見る →</span>
           </Link>
           <Link href="/music" className="group border border-[#b89e69] bg-[#f8f4ec]/85 px-7 py-9 text-left transition hover:bg-white/90">

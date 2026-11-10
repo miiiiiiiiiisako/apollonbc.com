@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   description:
     "Online and in-person consultations in English at Apollon Beauty Clinic in Shinagawa, Tokyo. Selected services do not require a referral.",
   alternates: {
-    canonical: "https://apollonbc.com/en",
+    canonical: "https://www.apollonbc.com/en",
     languages: {
-      en: "https://apollonbc.com/en",
-      ja: "https://apollonbc.com/beauty-public",
+      en: "https://www.apollonbc.com/en",
+      ja: "https://www.apollonbc.com/beauty-public",
     },
   },
 }
@@ -28,7 +28,7 @@ const services = [
     action: "View consultations and fees",
   },
   {
-    eyebrow: "IN-PERSON CONSULTATION",
+    eyebrow: "ONLINE & IN-PERSON",
     title: "Concerns after filler or Botox treatments",
     description:
       "Consultations are available for concerns about appearance or facial expression following injectable treatments.",
@@ -36,7 +36,7 @@ const services = [
     action: "View consultation information",
   },
   {
-    eyebrow: "IN-PERSON CONSULTATION",
+    eyebrow: "ONLINE & IN-PERSON",
     title: "Facial expression concerns after facial palsy",
     description:
       "Consultations are available for facial asymmetry, tightness, or other expression concerns following facial palsy.",
