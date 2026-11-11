@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 const musicLineUrl = "https://line.me/R/ti/p/@160orbcq"
-const REQUEST_FORM_URL = ""
+const REQUEST_FORM_URL = "https://forms.gle/WhiNVLC87ttfQ42z9"
 const buttonClass = "inline-flex min-h-12 w-full items-center justify-center rounded border border-[#b89e69] px-5 py-3 text-center text-sm text-[#8d7545] transition hover:bg-[#b89e69] hover:text-white"
 const primaryButtonClass = "inline-flex min-h-12 w-full items-center justify-center rounded bg-[#b89e69] px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-[#a08a59]"
 
