@@ -1,25 +1,31 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { blogPosts, getBlogPost, type BlogBlock } from "@/lib/blog/posts"
+import { getBlogPost, getBlogPosts, type BlogBlock } from "@/lib/blog/posts"
 
 const lineUrl = "https://lin.ee/oiYHa2N"
 
 type PageProps = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }))
+  return getBlogPosts("ja").map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  const post = getBlogPost(slug)
+  const post = getBlogPost(slug, "ja")
   if (!post) return {}
   const url = `https://www.apollonbc.com/blog/${post.slug}`
   return {
     title: `${post.title}｜Apollon.Beauty.Clinic`,
     description: post.description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        ja: url,
+        en: `https://www.apollonbc.com/en/blog/${post.slug}`,
+      },
+    },
     openGraph: { type: "article", title: `${post.title}｜Apollon.Beauty.Clinic`, description: post.description, url, publishedTime: post.publishedAt },
   }
 }
@@ -48,11 +54,11 @@ function Blocks({ blocks, costAndRisk = false }: { blocks: BlogBlock[]; costAndR
 
 export default async function BlogArticlePage({ params }: PageProps) {
   const { slug } = await params
-  const post = getBlogPost(slug)
+  const post = getBlogPost(slug, "ja")
   if (!post) notFound()
 
   return <main className="min-h-screen bg-[#f8f4ec] font-sans text-[#3f3a32]">
-    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><div className="flex items-center gap-4"><Link href="/en" hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link><a href={lineUrl} className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></div></header>
+    <header className="border-b border-[#ded4c3] bg-[#f8f4ec]/95 px-5 py-5 backdrop-blur"><div className="mx-auto flex max-w-5xl items-center justify-between"><Link href="/beauty-public" className="text-sm font-semibold tracking-wide text-[#8d7545]">Apollon.Beauty.Clinic</Link><div className="flex items-center gap-4"><Link href={`/en/blog/${post.slug}`} hrefLang="en" className="text-xs text-[#8d7545] underline underline-offset-4">English</Link><a href={lineUrl} className="text-sm text-[#8d7545] underline underline-offset-4">LINEで相談</a></div></div></header>
     <article className="mx-auto max-w-2xl px-5 pb-24 md:px-8">
       <header className="py-14 md:py-20"><p className="mb-4 text-sm text-[#8d7545]">{post.category}</p><h1 className="text-balance font-serif text-3xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-4xl">{post.title}</h1><div className="mt-6 flex flex-col gap-2 text-sm leading-relaxed text-[#766d5e] sm:flex-row sm:flex-wrap sm:gap-x-5"><time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time><p>執筆：松井美彩子（Apollon.Beauty.Clinic 院長・医師）</p></div><p className="mt-7 text-base leading-loose text-[#665e50]">{post.description}</p></header>
       <div className="border-t border-[#ded4c3] pt-10"><Blocks blocks={post.body} /></div>
