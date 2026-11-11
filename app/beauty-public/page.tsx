@@ -105,6 +105,16 @@ export default function BeautyPublicPage() {
         </section>
 
         <section className="border-t border-[#ded4c3] py-12 md:py-16">
+          <p className="mb-3 text-sm tracking-[0.16em] text-[#8d7545]">BLOG</p>
+          <h2 className="mb-8 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">ブログ</h2>
+          <article className="border-y border-[#ded4c3] py-7">
+            <p className="mb-3 text-sm text-[#8d7545]">注入治療後の修正相談</p>
+            <h3 className="max-w-3xl font-serif text-xl font-medium leading-relaxed text-[#3f3a32] md:text-2xl"><Link href="/blog/filler-correction-before-consultation" className="transition hover:text-[#8d7545]">目の下のヒアルロン酸が溶けない？ 注入治療のあと、修正を相談する前に知っておきたいこと</Link></h3>
+          </article>
+          <Link href="/blog" className="mt-6 inline-block text-sm text-[#8d7545] underline underline-offset-4">ブログ一覧を見る</Link>
+        </section>
+
+        <section className="border-t border-[#ded4c3] py-12 md:py-16">
           <h2 className="mb-6 font-serif text-2xl font-medium leading-relaxed tracking-wide text-[#3f3a32] md:text-3xl">症例紹介</h2>
           <p className="text-sm leading-relaxed text-[#665e50]">症例は準備中です。</p>
         </section>
