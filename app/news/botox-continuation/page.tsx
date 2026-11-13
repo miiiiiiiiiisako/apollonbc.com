@@ -4,6 +4,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "ボトックス継続特典を開始しました | Apollon Beauty Clinic",
   description: "前回施術から約3か月〜15週以内に同じ部位のボトックス施術を継続される方は通常価格より1,000円OFF。対象条件と注意事項をご案内します。",
+  robots: { index: false, follow: false },
 }
 
 export default function BotoxContinuationPage() {
