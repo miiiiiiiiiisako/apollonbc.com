@@ -44,6 +44,10 @@ function Blocks({ blocks, costAndRisk = false }: { blocks: BlogBlock[]; costAndR
     if (block.type === "heading") return <h2 key={`${block.text}-${index}`} className="pt-7 font-serif text-2xl font-medium leading-relaxed text-[#3f3a32] md:text-3xl">{block.text}</h2>
     if (block.type === "list") return <ul key={`list-${index}`} className="list-disc space-y-2 pl-6 text-base leading-loose text-[#514a40]">{block.items.map((item) => <li key={item}><CitationText text={item} /></li>)}</ul>
     if (block.type === "link") return <p key={`${block.text}-${index}`}><Link href={block.href} className="text-base leading-loose text-[#8d7545] underline underline-offset-4">{block.text}</Link></p>
+    if (costAndRisk && block.text.includes("くわしくは、顔面神経麻痺の治療相談のページでご案内しています。")) {
+      const [before, after] = block.text.split("顔面神経麻痺の治療相談のページ")
+      return <p key={`paragraph-${index}`} className="text-base leading-loose text-[#514a40]"><CitationText text={before} /><Link href="/facial-palsy" className="text-[#8d7545] underline underline-offset-4">顔面神経麻痺の治療相談のページ</Link><CitationText text={after} /></p>
+    }
     if (costAndRisk && block.text.includes("くわしくは、修正相談のページでご案内しています。")) {
       const [before, after] = block.text.split("修正相談のページ")
       return <p key={`paragraph-${index}`} className="text-base leading-loose text-[#514a40]"><CitationText text={before} /><Link href="/correction" className="text-[#8d7545] underline underline-offset-4">修正相談のページ</Link><CitationText text={after} /></p>

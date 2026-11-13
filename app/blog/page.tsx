@@ -22,7 +22,7 @@ function formatDate(date: string) {
 
 export default async function BlogPage({ searchParams }: { searchParams: Promise<{ category?: string | string[] }> }) {
   const query = await searchParams
-  const posts = getBlogPosts("ja")
+  const posts = getBlogPosts("ja").sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
   const categories = getBlogCategories("ja")
   const requestedCategory = typeof query.category === "string" ? query.category : ""
   const selectedCategory = categories.includes(requestedCategory) ? requestedCategory : "すべて"
